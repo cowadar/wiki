@@ -2,7 +2,7 @@
 
 ## Wat is Rufus?
 
-![[rufus screenshot]](_assets/images/rufus.png)
+![[rufus screenshot]](../_assets/images/rufus.png)
 
 Rufus is a utility that helps format and create bootable USB flash drives, such as USB keys/pendrives, memory sticks, etc.
 

@@ -4,7 +4,7 @@ Nginx Proxy Manager is een applicatie die je kunt gebruiken om eenvoudig en veil
 
 Om Nginx Proxy Manager te installeren, heb je [Docker](container/docker/docker.md) en [Docker Compose](container/docker/docker-compose.md) nodig. Je kunt een [YAML](programming/yaml.md)-bestand maken met de configuratie voor de Nginx Proxy Manager container en deze uitvoeren met docker-compose. Daarna kun je inloggen op de admin panel op poort `81` en je webdiensten toevoegen als proxy hosts.
 
-![NPM](_assets/images/npm.png)
+![NPM](../_assets/images/npm.png)
 
 ## Vergelijking met Traefik
 

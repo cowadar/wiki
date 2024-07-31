@@ -25,7 +25,7 @@ Dit is heel simpel op te zetten door middel van volgende tools:
 ## PiHole
 
 Hier heb ik een voorbeeld van hoe je dit configureerd in PiHole.
-![Pihole_local_dns](_assets/images/pihole_local_dns.png)
+![Pihole_local_dns](../_assets/images/pihole_local_dns.png)
 
 ## Suffix
 
@@ -39,7 +39,7 @@ Geef in een command prompt volgende in:
 ipconfig /all
 ```
 
-![Voorbeeld cmd](_assets/images/localdns_cmd.png)
+![Voorbeeld cmd](../_assets/images/localdns_cmd.png)
 > Je zult zien dat bij iedere netwerkadapter (wifi, eth, vpn,...) er `Connection-specific DNS Suffix` zal staan.
 
 In dit voorbeeld staat hier `lan`. Dat wil zeggen dat ik dus met mijn browser kan navigeren naar `tower\`, die uitkomt op mijn server, genaamd `tower`.
@@ -57,9 +57,9 @@ Je moet je geen zorgen maken over de poorten, want elke service zal automatisch 
 Je kan meer dan 1 suffix statisch instellen of meegeven met je DHCP release.
 Als je dit in [Wireshark](tools/wireshark.md) zou capturen zal je zien dat hij achter `tower` alle suffixen gaat plakken en dat over het netwerk naar de local dns server zal sturen. Dit kan je capturen volgens [deze](tools/wireshark.md#local-dns-prefix-capturen) methode:
 
-![foto van wireshark capture](_assets/images/local_dns_tower_suffix.png)
+![foto van wireshark capture](../_assets/images/local_dns_tower_suffix.png)
 
-![foto van wireshark capture](_assets/images/wireshark_tower_suffix.png)
+![foto van wireshark capture](../_assets/images/wireshark_tower_suffix.png)
 
 
 
@@ -79,9 +79,9 @@ Het volgende voorbeeld is in docker.
 !!! note
     Graag voldens volgende structuur maken. Als je dit anders wilt pas je dit aan in de docker-compose.yaml
 
-![local_dns_docker_folder](_assets/images/local_dns_docker_folder.png)
-![local_dns_docker](_assets/images/local_dns_docker.png)
-![local_dns_docker_logs](_assets/images/local_dns_docker_logs.png)
+![local_dns_docker_folder](../_assets/images/local_dns_docker_folder.png)
+![local_dns_docker](../_assets/images/local_dns_docker.png)
+![local_dns_docker_logs](../_assets/images/local_dns_docker_logs.png)
 
 
 #### docker-compose.yaml

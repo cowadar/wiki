@@ -9,7 +9,7 @@ In deze video bespreken we branchebescherming en het belang ervan bij het handha
 3. Configureer brancheregels voor een specifieke branch of gebruik wildcards voor meerdere branches.
 4. Specificeer de gewenste regels en opties voor branchebescherming:
 
-![git protected branches](_assets/images/git/git_protected_branches.png)
+![git protected branches](../_assets/images/git/git_protected_branches.png)
 
 ## Configuring Protection Rules
 

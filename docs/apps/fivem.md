@@ -1,11 +1,11 @@
 # Fivem
 
-Fivem is een modificatie voor [Grand Theft Auto V](windows/games/gta5.md) waarmee je multiplayer kunt spelen op aangepaste servers, aangedreven door Cfx.re. Fivem maakt gebruik van de fxOM script runtimes, die verschillende programmeertalen ondersteunen, zoals Lua, C# en JavaScript. Fivem laat je toe om je eigen server te maken of deelnemen aan bestaande servers met verschillende spelmodi, zoals roleplay, racen, deathmatch en meer. Fivem heeft ook een uitgebreide documentatie voor ontwikkelaars die meer willen weten over de kernmechanismen van de modificatie.
+Fivem is een modificatie voor [Grand Theft Auto V](../windows/games/gta5.md) waarmee je multiplayer kunt spelen op aangepaste servers, aangedreven door Cfx.re. Fivem maakt gebruik van de fxOM script runtimes, die verschillende programmeertalen ondersteunen, zoals Lua, C# en JavaScript. Fivem laat je toe om je eigen server te maken of deelnemen aan bestaande servers met verschillende spelmodi, zoals roleplay, racen, deathmatch en meer. Fivem heeft ook een uitgebreide documentatie voor ontwikkelaars die meer willen weten over de kernmechanismen van de modificatie.
 
-![Fivem interface screenshot](_assets/images/screenshots/fivem_interface.jpg)
+![Fivem interface screenshot](../_assets/images/screenshots/fivem_interface.jpg)
 
 ## Installatie
-Om Fivem te gebruiken, moet je het downloaden van de website en installeren op je computer . Je hebt ook een geïnstalleerde en bijgewerkte versie van GTA V nodig. Fivem verandert niets aan je GTA V installatie, dus je kunt zonder problemen wisselen tussen Fivem en [GTA:O](windows/games/gta5.md#gta-online). Fivem heeft geen invloed op de [Rockstar](windows/games/gta5.md#rockstar) Online Services, dus je kunt niet geband worden voor het spelen van Fivem.
+Om Fivem te gebruiken, moet je het downloaden van de website en installeren op je computer . Je hebt ook een geïnstalleerde en bijgewerkte versie van GTA V nodig. Fivem verandert niets aan je GTA V installatie, dus je kunt zonder problemen wisselen tussen Fivem en [GTA:O](../windows/games/gta5.md#gta-online). Fivem heeft geen invloed op de [Rockstar](../windows/games/gta5.md#rockstar) Online Services, dus je kunt niet geband worden voor het spelen van Fivem.
 
 ### Systeem vereisten
 De systeemeisen voor Fivem zijn afhankelijk van de server waarop je speelt, maar over het algemeen zijn ze vergelijkbaar met die van GTA V.
@@ -26,7 +26,7 @@ Voor Linux heb je minimaal nodig:
 
 ## Fivem self-hosting
 
-Om Fivem uit te rollen met [Docker](container/docker/docker.md), moet je eerst [Docker](container/docker/docker.md#installation) installeren op je Linux machine. Daarna kun je de volgende stappen volgen:
+Om Fivem uit te rollen met [Docker](../container/docker/docker.md), moet je eerst [Docker](../container/docker/docker.md#installation) installeren op je Linux machine. Daarna kun je de volgende stappen volgen:
 
 1. Maak een map aan voor je serverbestanden, bijvoorbeeld `~/fivem`.
 2. Download het `server-data` repository van GitHub naar je map:
@@ -67,7 +67,7 @@ Om Fivem uit te rollen met [Docker](container/docker/docker.md), moet je eerst [
     docker build -t fivem-server ~/fivem
     ```
 
-7. Start de Docker container met het commando:
+7. Start de Docker ../container met het commando:
     ```bassh
     docker run -d --name fivem-server -p 30120:30120/tcp -p 30120:30120/udp fivem-server
     ```

@@ -34,6 +34,6 @@ Register-ScheduledTask -TaskName "Update wsl" -Trigger $Time -Action $Actions -S
 
 If everything's good, you should see the new task in the Task Scheduler:
 
-![Task Scheduler](../_assets/images/task-scheduler.png)
+![Task Scheduler](_assets/images/task-scheduler.png)
 
 You can run the task manually once to validate it works well. It could take a few minutes if you have never updated the distro!

@@ -16,7 +16,7 @@ Set up an HA K3s cluster backed by an external datastore such as MySQL, PostgreS
 
 #### Install Database
 
-Install [MariaDB](../../databases/mariadb.md).
+Install [MariaDB](databases/mariadb.md).
 
 #### Install Servers
 ```bash

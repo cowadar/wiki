@@ -7,13 +7,13 @@ TODO: WIP
 
 Ever since DNS was created in 1987, it has been largely unencrypted. Everyone between your device and the resolver is able to snoop on or even modify your DNS queries and responses.
 
-The UDP source port is 53 which is the standard port number for unencrypted [DNS](dns.md). The [UDP](../udp.md) payload is therefore likely to be a [DNS](dns.md) answer.
+The UDP source port is 53 which is the standard port number for unencrypted [DNS](dns.md). The [UDP](udp.md) payload is therefore likely to be a [DNS](dns.md) answer.
 
 Encrypting DNS makes it much harder for snoopers to look into your [DNS](dns.md) messages, or to corrupt them in transit.
 
 Two standardized mechanisms exist to secure the [DNS](dns.md) transport between you and the resolver, DNS over TLS, and DNS queries over HTTPS.
 
-Both are based on Transport Layer Security ([TLS](../tls.md)) which is also used to secure communication between you and a website using HTTPS.
+Both are based on Transport Layer Security ([TLS](tls.md)) which is also used to secure communication between you and a website using HTTPS.
 
 As both DoT and DoH are relatively new, they are not universally deployed yet.
 

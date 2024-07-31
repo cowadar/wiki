@@ -277,9 +277,9 @@ Quick reference:
 | `rd`       | `rmdir`                                    |
 | `cd` / `~` | `cd` to your home directory                |
 | `..`       | `cd ..`                                    |
-| `...`      | `cd ../..`                                 |
-| `....`     | `cd ../../..`                              |
-| `.....`    | `cd ../../../..`                           |
+| `...`      | `cd ..`                                 |
+| `....`     | `cd ..`                              |
+| `.....`    | `cd ..`                           |
 | `/`        | `cd /`                                     |
 | `d`        | `dirs -v` (lists last visited directories) |
 | `cd +n`    | Switch to directory number `n`             |

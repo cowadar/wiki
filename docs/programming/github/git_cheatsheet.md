@@ -37,7 +37,7 @@ git config core.filemode false
 
 Indien je in meerdere onderliggende folders git repo's hebt zitten, kan je met dit commando alle git repos laten pullen.
 
-Dankzij [parallel](../../linux/parallel.md) zal dit niet tegelijkertijd uitgevoerd worden, maar op meerdere tasks in parallel.
+Dankzij [parallel](linux/parallel.md) zal dit niet tegelijkertijd uitgevoerd worden, maar op meerdere tasks in parallel.
 
 ```bash
 find . -maxdepth 8 -name '.git' -prune -type d -printf '%h\n' | parallel --eta 'echo {} && git -C {} pull'

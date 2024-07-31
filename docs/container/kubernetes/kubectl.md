@@ -9,7 +9,7 @@ Documentation: [Kubectl Reference](https://kubernetes.io/docs/reference/kubectl/
 
 ### On Windows (PowerShell)
 
-Install Kubectl with [chocolatey](../../tools/chocolatey.md):
+Install Kubectl with [chocolatey](tools/chocolatey.md):
 
 ```
 choco install kubernetes-cli

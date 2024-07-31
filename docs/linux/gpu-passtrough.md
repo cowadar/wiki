@@ -35,7 +35,7 @@ Maak een nieuwe virtuele machine. Tijdens de wizard moet je aangeven dat je de `
 
 ### TAB: Overview
 
-BIOS --> ../x64/OVMF_code.secboot.fd
+BIOS --> x64/OVMF_code.secboot.fd
 
 ### TAB: CPUs
 

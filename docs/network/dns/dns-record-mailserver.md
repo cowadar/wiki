@@ -44,7 +44,7 @@ DKIM (Domain Keys Identified Mail) allows the receiving mail server to check tha
 
 >If you want to add DKIM to your mail server you first need to create a private and a public keypair
 
-We use the tool [OpenSSL](../../tools/openssl.md) to generate a DKIM private and public keypair.
+We use the tool [OpenSSL](tools/openssl.md) to generate a DKIM private and public keypair.
 
 ```sh
 openssl genrsa -out dkim_private.pem 2048

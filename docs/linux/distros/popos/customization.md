@@ -4,7 +4,7 @@ title: Pop!_OS changes
 
 ## Gnome
 
-[Pop!\_OS](./popos.md) gebruikt [Gnome](../../gnome.md) als window manager.
+[Pop!\_OS](./popos.md) gebruikt [Gnome](gnome.md) als window manager.
 
 ## Gnome extensions
 
@@ -51,14 +51,14 @@ Er zullen vermoedelijk al enkele zaken aangepast zijn, maar om zeker te zijn, is
 
 1. Ga naar [https://www.gnome-look.org](https://www.gnome-look.org)
 2. Zoek naar `Flatery`
-   ![Alt text](../../../_assets/images/popos/image-1.png)
+   ![Alt text](_assets/images/popos/image-1.png)
 3. Download de `indigo` versie.
 
 ### Cursor
 
 1. Ga naar [https://www.gnome-look.org](https://www.gnome-look.org)
 2. Zoek naar `McMojave cursors`
-   ![Alt text](../../../_assets/images/popos/image.png)
+   ![Alt text](_assets/images/popos/image.png)
 3. Download
 
 ### Installatie flatery & McMojave
@@ -74,7 +74,7 @@ Er zullen vermoedelijk al enkele zaken aangepast zijn, maar om zeker te zijn, is
 
 1. Ga naar [https://www.gnome-look.org](https://www.gnome-look.org)
 2. Zoek naar `Sweet - New Flavor`.
-   ![Alt text](../../../_assets/images/popos/image-2.png)
+   ![Alt text](_assets/images/popos/image-2.png)
 3. Download `Sweet-Dark-v40.tar.xz`
 4. Sleep de folder naar `~/.themes` folder.
 5. Open `gnome-tweaks` opnieuw
@@ -88,18 +88,18 @@ Er zullen vermoedelijk al enkele zaken aangepast zijn, maar om zeker te zijn, is
 
 1. Ga naar [https://extensions.gnome.org/](https://extensions.gnome.org/)
 2. Zoek naar `Dash to Panel`
-   ![Alt text](../../../_assets/images/popos/image-3.png)
+   ![Alt text](_assets/images/popos/image-3.png)
 3. Activeer de extension
 
 #### Configuratie Dash to Panel
 
 1. Open de `Extensions` app
 2. Neem volgende instellingen over:
-   ![Alt text](../../../_assets/images/popos/image-6.png)
-   ![Alt text](../../../_assets/images/popos/image-5.png)
+   ![Alt text](_assets/images/popos/image-6.png)
+   ![Alt text](_assets/images/popos/image-5.png)
 
 !!! note
-Indien gewenst, kan je mijn [export file](../../../_assets/files/dash-to-panel) gebruiken.
+Indien gewenst, kan je mijn [export file](_assets/files/dash-to-panel) gebruiken.
 
 ### Andere interessante extensies
 

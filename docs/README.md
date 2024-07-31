@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/cowadar/pkm">
-    <img src="_assets/images/site/cowadar_black.svg" alt="Logo" width="80">
+    <img src="../_assets/images/site/cowadar_black.svg" alt="Logo" width="80">
   </a>
 
   <h3 align="center">Cowadar</h3>
@@ -37,7 +37,7 @@
 
 ## Over Cowadar
 
-![Screen Shot](_assets/images/site/supershot.png)
+![Screen Shot](../_assets/images/site/supershot.png)
 
 We hebben deze PKM opgezet aangezien we beide dagelijks veel bijleren en er dagelijks nieuwe technologiëen en ontwikkelingen ontstaan. Aangezien we het fijn vinden om mee te zijn met de laatste nieuwtjes, hebben we uiteraard ook een plaats nodig om dit te kunnen documenteren.
 

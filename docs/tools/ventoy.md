@@ -9,7 +9,7 @@ You can also browse ISO/WIM/IMG/VHD(x)/EFI files in local disks and boot them.
 x86 Legacy BIOS, IA32 UEFI, x86\_64 UEFI, ARM64 UEFI and MIPS64EL UEFI are supported in the same way.
 Most types of OS supported (Windows/WinPE/Linux/ChromeOS/Unix/VMware/Xen...)
 
-![Ventoy screenshot](_assets/images/ventoy.png)
+![Ventoy screenshot](../_assets/images/ventoy.png)
 
 ## links
 

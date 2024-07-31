@@ -1,12 +1,12 @@
 # Bedar
 
-![Bedar Profile picture](_assets/images/bedar/bedar_profile.jpg)
+![Bedar Profile picture](../_assets/images/bedar/bedar_profile.jpg)
 
 ## Over mij
 
 Ik ben sinds kinds af aan gepassioneerd door computers, servers, networking en basically alles dat met IT te maken heeft.
 
-Mijn eerste herinnering was toen ik als kind een joystick gekregen had voor mijn verjaardag. Uiteraard bestond er toen nog geen "plug & play" en was mijn vader bezig om de drivers werkende te krijgen voor mij. Zo zat ik uren naast hem te kijken hoe hij al de magische getallen en cijfers deed veranderen (ja, het was in de het [MS-DOS](windows/msdos.md) tijdperk). Tijdens dat hij hiermee bezig was, heb ik hem verschillende vragen gesteld en leerde ik dus op vroege leeftijd al hoe je een computer moest aansluiten. (Dit was als kind al veel)
+Mijn eerste herinnering was toen ik als kind een joystick gekregen had voor mijn verjaardag. Uiteraard bestond er toen nog geen "plug & play" en was mijn vader bezig om de drivers werkende te krijgen voor mij. Zo zat ik uren naast hem te kijken hoe hij al de magische getallen en cijfers deed veranderen (ja, het was in de het [MS-DOS](../windows/msdos.md) tijdperk). Tijdens dat hij hiermee bezig was, heb ik hem verschillende vragen gesteld en leerde ik dus op vroege leeftijd al hoe je een computer moest aansluiten. (Dit was als kind al veel)
 
 Door deze herinnering is er een vurige passie ontstaan om met IT te werken. Of zoals mijn moeder zegt "Zolang het maar iets met computers is".
 

@@ -1,6 +1,6 @@
 # Cowarol
 
-![Bedar Profile picture](_assets/images/cowarol/cowarol.png)
+![Bedar Profile picture](../_assets/images/cowarol/cowarol.png)
 
 ## Over mij
 

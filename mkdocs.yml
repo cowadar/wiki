@@ -9,14 +9,12 @@ site_url: "https://wiki.cowadar.be"
 copyright: "&copy; 2023 Cowadar"
 
 # Repository
-repo_name: "cowadar/cowadar"
-repo_url: ""
+repo_name: "cowadar/wiki"
+repo_url: "https://github.com/cowadar/wiki"
 edit_uri: ""
 
 # Configuration
 docs_dir: "docs"
-
-dev_addr: '127.0.0.1:8000'
 
 theme:
   name: "material"
@@ -91,8 +89,8 @@ markdown_extensions:
   # - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
       linenums: true

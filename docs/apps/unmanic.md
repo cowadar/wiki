@@ -1,0 +1,3 @@
+# Unmanic
+
+Unmanic is een eenvoudig hulpmiddel voor het optimaliseren van je bestandsbibliotheek. Je kunt het gebruiken om je bestanden om te zetten naar een enkel, uniform formaat, bestandsbewegingen te beheren op basis van tijdstempels of aangepaste opdrachten uit te voeren op een bestand op basis van de bestandsgrootte. Configureer Unmanic eenvoudig door het naar je bibliotheek te wijzen en laat het automatisch die bibliotheek voor je beheren.

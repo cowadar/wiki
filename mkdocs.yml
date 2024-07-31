@@ -1,0 +1,166 @@
+# Project information
+site_name: "Personal Knowledge Management"
+site_description: "Documentatie van Cowarol & Bedar"
+site_author: "Cowarol, Bedar"
+site_url: "https://cowadar.be"
+
+# Copyright
+copyright: "&copy; 2023 Cowadar"
+
+# Repository
+repo_name: "cowadar/cowadar"
+repo_url: ""
+edit_uri: ""
+
+# Configuration
+docs_dir: "docs"
+
+dev_addr: '127.0.0.1:8000'
+
+theme:
+  name: "material"
+  language: "nl"
+
+  shortcuts:
+    help: 191 # ?
+    next: 78 # n
+    previous: 80 # p
+    search: 83 # s
+
+  highlightjs: true
+
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  logo: "_assets/images/site/cowadar_light.svg"
+  # favicon: "images/site/favicon.ico"
+
+  features:
+    ## Navigation
+    - navigation.tabs # header navigation
+    - navigation.tabs.sticky # make it sticky
+    - navigation.top # Back to top
+    # - navigation.instant
+    - navigation.tracking
+    # - navigation.indexes
+
+    ## Code
+    - content.code.copy
+
+    ## Search
+    - search.suggest # instant suggestions while typing
+    # - search.share
+    - search.highlight # hightlight results in document
+
+    ## Header
+    - header.autohide # hide header when scrolling
+
+markdown_extensions:
+
+  # Python Markdown
+  # - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  # - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  # - pymdownx.superfences:
+  #     custom_fences:
+  #       - name: mermaid
+  #         class: mermaid
+  #         format: !!python/name:pymdownx.superfences.fence_code_format
+
+plugins:
+  - search:
+      lang: nl
+      separator: '[\s\-\.]'
+  - awesome-pages
+
+extra:
+  consent:
+    title: Cookie consent
+    description: >
+      We gebruiken cookies om ook uw herhaalde bezoeken en voorkeuren te herkennen
+      om de effectiviteit van onze documentatie te meten en of gebruikers
+      vinden waarnaar ze op zoek zijn. Met uw toestemming helpt u ons om
+      onze documentatie beter te maken.
+    cookies:
+      analytics: Google
+    actions:
+      - accept
+      - manage
+    analytics:
+      provider: google
+      property: G-2XCYZRX6FS
+      feedback:
+      title: Was deze pagina nuttig?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: Deze pagina was nuttig!
+          data: 1
+          note: >-
+            Bedankt voor je feedback!
+        - icon: material/emoticon-sad-outline
+          name: Deze pagina kan worden verbeterd
+          data: 0
+          note: >-
+            Bedankt voor je feedback! Help ons om deze pagina te verbeteren via ons <a href="https://github.com/.../issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">feedback form</a>.
+
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/cowadar
+      name: Github
+
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCnDHClzKX1bgx8h2JW_Oa_A
+      name: Youtube
+
+  # generator: false
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - https://unpkg.com/mermaid/dist/mermaid.min.js

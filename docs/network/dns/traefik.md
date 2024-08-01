@@ -12,7 +12,7 @@ Zie [https://doc.traefik.io/traefik/routing/routers/#certresolver](https://doc.t
 Traefik is een reverse proxy. Dit wil zeggen dat je heel gemakkelijk verschillende services kunt bereiken vanaf het internet zonder elke keer een port open te zetten.
 De enigeste poort die je moet openzetten is 443. En verwijzen naar het toest (IP) waar Traefik op draait.
 
-In dit voorbeeld gebruiken we een firewall van het met Unifi. Dit kan je ook perfect in de router(modem) van uw provider.
+In dit voorbeeld gebruiken we een firewall van het met Unifi. Dit kan je ook perfect in de router(modem) van uw provider doen.
 ![Voorbeeld cmd](../../_assets/images/traefik_port_forwarding.png)
 
 Bij je DNS provider verwijs je een A record door naar je Publiek IP (dit kan ook automatisch gebeuren door [DDNS](ddns.md)).

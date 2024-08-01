@@ -15,22 +15,20 @@ De enige poort(en) die je moet openzetten is 443 (en 80). En verwijzen naar je t
 In dit voorbeeld gebruiken we Unifi
 ![Voorbeeld cmd](../../_assets/images/traefik_port_forwarding.png)
 
-Bij je DNS provider verwijs je een A record door naar je Home IP (dit kan ook automatisch door [DDNS](ddns.md)).
+Bij je DNS provider verwijs je een A record door naar je Publiek IP (dit kan ook automatisch gebeuren door [DDNS](ddns.md)).
 Voor alle services gebruik je een CNAME record die verwijst naar @ (@ = jouw domein).
 ![Voorbeeld cmd](../../_assets/images/traefik_a_record.png)
 ![Voorbeeld cmd](../../_assets/images/traefik_cname_record.png)
 
 
-### Configuratie Files
+### Installatie bestanden
+Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
 
-Als je dat eenmaal gedaan hebt kan je beginen aan de configuratie van Traefik.
-In ons voorbeeld gebruiken we Traefik in docker.
+!!! info 
+    Onze Traefik gebruikt een dynamische file. Dat wilt zeggen dat je als je de config aanpast dat je niet elke keer de docker opnieuw moet genereren.
 
-!!! note
-    Onze Traefik gebruikt een dynamische file. Dat wilt zeggen dat je als je de config aanpast dat je niet elke keer de docker opneieuw moet genereren.
-
-!!! warning
-    Graag volgens volgende fodler structuur maken. Als je dit anders wilt pas je dit aan in de docker-compose.yaml
+!!! info
+    Graag volgens volgende folder structuur maken.
 
     ```bash
     docker
@@ -89,20 +87,19 @@ In ons voorbeeld gebruiken we Traefik in docker.
             labels:
               - "traefik.enable=true"
               - "traefik.http.routers.traefik.entrypoints=http"
-              - "traefik.http.routers.traefik.rule=Host(`traefik-dashboard.domain.be`)"
+              - "traefik.http.routers.traefik.rule=Host(`traefik-dashboard.domain.be`)" # Aanpassen
               - "traefik.http.middlewares.traefik-auth.basicauth.users=${TRAEFIK_DASHBOARD_CREDENTIALS}"
               - "traefik.http.middlewares.traefik-https-redirect.redirectscheme.scheme=https"
               - "traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https"
               - "traefik.http.routers.traefik.middlewares=traefik-https-redirect"
               - "traefik.http.routers.traefik-secure.entrypoints=https"
-              - "traefik.http.routers.traefik-secure.rule=Host(`traefik-dashboard.domain.be`)"
+              - "traefik.http.routers.traefik-secure.rule=Host(`traefik-dashboard.domain.be`)" #Aanpassen 
               - "traefik.http.routers.traefik-secure.middlewares=traefik-auth"
               - "traefik.http.routers.traefik-secure.tls=true"
               - "traefik.http.routers.traefik-secure.tls.certresolver=cloudflare"
-              - "traefik.http.routers.traefik-secure.tls.domains[0].main=domain.be" # copy past indien meerdere domeinen maar dan met een 1 (Arrey)
-              - "traefik.http.routers.traefik-secure.tls.domains[0].sans=*.domain.be" # copy past indien meerdere domeinen maar dan met een 1 (Arrey)
+              - "traefik.http.routers.traefik-secure.tls.domains[0].main=domain.be" #Aanpassen # copy past indien meerdere domeinen maar dan met een 1 (Array)
+              - "traefik.http.routers.traefik-secure.tls.domains[0].sans=*.domain.be" #Aanpasen # copy past indien meerdere domeinen maar dan met een 1 (Array)
               - "traefik.http.routers.traefik-secure.service=api@internal"
-              #- kuma.__solo_app="Traefik", 1, "Traefik", "Traefik"
 
         secrets:
           cf_api_token:
@@ -136,7 +133,7 @@ In ons voorbeeld gebruiken we Traefik in docker.
     === "traefik.yml"
 
         !!! tip
-            Als je in test fase bent zet je de "caServer: https://acme-staging-v02.api.letsencrypt.org/directory" op staging.
+            Bent u in test fase? Zet dan de "caServer: https://acme-staging-v02.api.letsencrypt.org/directory" op staging.
             Lijn 60 aan en lijn 59 uit. Als je dit niet doet kan je geblokkeerd worden als je te veel request doet.
             Een request gebeurd als je traefik opnieuw start.
 
@@ -285,7 +282,7 @@ In ons voorbeeld gebruiken we Traefik in docker.
 
 
 ### Run
-Als je alle bovenstaande stappen gedaan hebt doe je
+Als je alle bovenstaande stappen gedaan hebt voer je het volgende commado in de terminal in dezelfde folder als docker compose.
 ```bash
 docker compose up -d
 ``` 
@@ -293,12 +290,13 @@ docker compose up -d
 !!! warning
     Check de acme.json deze zou ingevuld moeten worden en daar zie je de certificaten.
 
-### configureer traefik.yaml
+### Configureer traefik.yaml
 
 Zoals eerder gezegt is deze file dynamisch. copy past de code voor elke (sub)domein.
 
 
 ??? "traefik.yml edit"
+
     ```yaml
     routers:
                 sub:
@@ -338,8 +336,8 @@ Zoals eerder gezegt is deze file dynamisch. copy past de code voor elke (sub)dom
                     passHostHeader: true
     ```
 ### Advanced
-Je Kan ook traefik zijn configuratie automatisch laten verlopen door middel van labels op je docker containers te zetten.
-De configuratie bij je DNS provider zal je nog steeds handmatig moeten doen.
+U Kunt ook traefik zijn configuratie automatisch laten verlopen door middel van labels op je docker containers te zetten.
+De configuratie bij uw DNS provider zal nog steeds handmatig moeten gebeuren.
 
 ??? Labels
 

@@ -5,7 +5,7 @@
 Zie [https://doc.traefik.io/traefik/routing/routers/#certresolver](https://doc.traefik.io/traefik/routing/routers/#certresolver)
 
 
-### Treafik
+## Treafik
 
 ![Voorbeeld cmd](../../_assets/images/traefik-reverse-proxy.png)
 
@@ -15,11 +15,13 @@ De enige poort(en) die je moet openzetten is 443 (en 80). En verwijzen naar je t
 In dit voorbeeld gebruiken we Unifi
 ![Voorbeeld cmd](../../_assets/images/traefik_port_forwarding.png)
 
-Bij je DNS provider verwijs je een A record door naar je Home IP.
+Bij je DNS provider verwijs je een A record door naar je Home IP (dit kan ook automatisch door [DDNS](ddns.md)).
 Voor alle services gebruik je een CNAME record die verwijst naar @ (@ = jouw domein).
 ![Voorbeeld cmd](../../_assets/images/traefik_a_record.png)
 ![Voorbeeld cmd](../../_assets/images/traefik_cname_record.png)
 
+
+### Configuratie Files
 
 Als je dat eenmaal gedaan hebt kan je beginen aan de configuratie van Traefik.
 In ons voorbeeld gebruiken we Traefik in docker.
@@ -48,9 +50,6 @@ In ons voorbeeld gebruiken we Traefik in docker.
             └── docker-compose.yaml
 
     ```
-
-
-#### Configuratie Files
 
 ??? "Config files"
     !!! warning
@@ -121,6 +120,7 @@ In ons voorbeeld gebruiken we Traefik in docker.
            #Chose 1 or more domains
            #Plain tekst below
         ```
+        ![Voorbeeld cmd](../../_assets/images/traefik_user_api_token.png)
     === ".env"
 
         ``` yaml
@@ -134,6 +134,11 @@ In ons voorbeeld gebruiken we Traefik in docker.
         TRAEFIK_DASHBOARD_CREDENTIALS=admin:$$2y$$05$$8eA6bz6E7J/ChsRFuD8njeW45yfJutYYb4HxwgUir3HP4EsggP/QNo0.
         ```
     === "traefik.yml"
+
+        !!! tip
+            Als je in test fase bent zet je de "caServer: https://acme-staging-v02.api.letsencrypt.org/directory" op staging.
+            Lijn 60 aan en lijn 59 uit. Als je dit niet doet kan je geblokkeerd worden als je te veel request doet.
+            Een request gebeurd als je traefik opnieuw start.
 
         ``` yaml
         api:
@@ -277,3 +282,79 @@ In ons voorbeeld gebruiken we Traefik in docker.
           
         !!! warning
             Deze file laat je leeg deze word zelf aangevult.
+
+
+### Run
+Als je alle bovenstaande stappen gedaan hebt doe je
+```bash
+docker compose up -d
+``` 
+
+!!! warning
+    Check de acme.json deze zou ingevuld moeten worden en daar zie je de certificaten.
+
+### configureer traefik.yaml
+
+Zoals eerder gezegt is deze file dynamisch. copy past de code voor elke (sub)domein.
+
+
+??? "traefik.yml edit"
+    ```yaml
+    routers:
+                sub:
+                entryPoints:
+                    - "https"
+                rule: "Host(`sub.domain.be`)"
+                middlewares:                      # Desable This if you having troubles 
+                    - default-headers               # Learn more about Middlewares
+                    - https-redirectscheme          #
+                tls: {}
+                service: sub
+
+                sub2:
+                entryPoints:
+                    - "https"
+                rule: "Host(`sub2.domain.be`)"
+                middlewares:                       
+                    - default-headers               
+                    - https-redirectscheme          
+                tls: {}
+                service: sub2
+
+
+            #endregion
+            #region services
+            services:
+                sub:
+                loadBalancer:
+                    servers:
+                    - url: "http://172.30.0.50:5042"
+                    passHostHeader: true
+
+                sub2:
+                loadBalancer:
+                    servers:
+                    - url: "http://172.30.0.51:5042"
+                    passHostHeader: true
+    ```
+### Advanced
+Je Kan ook traefik zijn configuratie automatisch laten verlopen door middel van labels op je docker containers te zetten.
+De configuratie bij je DNS provider zal je nog steeds handmatig moeten doen.
+
+??? Labels
+
+    ```yaml
+        labels:
+        # if you are not using traefik, comment out labels
+        - "traefik.enable=true"
+        - "traefik.http.routers.portainer.entrypoints=http"
+        - "traefik.http.routers.portainer.rule=Host(`pihole.domain.be`)"
+        - "traefik.http.middlewares.portainer-https-redirect.redirectscheme.scheme=https"
+        - "traefik.http.routers.portainer.middlewares=portainer-https-redirect"
+        - "traefik.http.routers.portainer-secure.entrypoints=https"
+        - "traefik.http.routers.portainer-secure.rule=Host(`pihole.domain.be`)"
+        - "traefik.http.routers.portainer-secure.tls=true"
+        - "traefik.http.routers.portainer-secure.service=portainer"
+        - "traefik.http.services.portainer.loadbalancer.server.port=9000"
+        - "traefik.docker.network=proxy"
+    ```

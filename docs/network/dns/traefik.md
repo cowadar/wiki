@@ -7,6 +7,8 @@ Zie [https://doc.traefik.io/traefik/routing/routers/#certresolver](https://doc.t
 
 ### Treafik
 
+![Voorbeeld cmd](../../_assets/images/traefik-reverse-proxy.png)
+
 Traefik is een reverse proxy. Dit wil zeggen dat je heel gemakkelijk verschillende services kunt bereiken vanaf het internet zonder elke keer een port forward te doen.
 De enige poort(en) die je moet openzetten is 443 (en 80). En verwijzen naar je traefik IP.
 
@@ -16,6 +18,7 @@ In dit voorbeeld gebruiken we Unifi
 Bij je DNS provider verwijs je een A record door naar je Home IP.
 Voor alle services gebruik je een CNAME record die verwijst naar @ (@ = jouw domein).
 ![Voorbeeld cmd](../../_assets/images/traefik_a_record.png)
+![Voorbeeld cmd](../../_assets/images/traefik_cname_record.png)
 
 
 Als je dat eenmaal gedaan hebt kan je beginen aan de configuratie van Traefik.

@@ -2,9 +2,9 @@
 
 Nginx Proxy Manager is een applicatie die je kunt gebruiken om eenvoudig en veilig je webdiensten op je netwerk bloot te stellen. Het maakt gebruik van Nginx als een reverse proxy om verkeer te routeren naar je interne webserver. Het biedt ook gratis SSL-certificaten met Let's Encrypt en een mooie webinterface om je virtuele hosts te beheren.
 
-Om Nginx Proxy Manager te installeren, heb je [Docker](container/docker/docker.md) en [Docker Compose](container/docker/docker-compose.md) nodig. Je kunt een [YAML](programming/yaml.md)-bestand maken met de configuratie voor de Nginx Proxy Manager container en deze uitvoeren met docker-compose. Daarna kun je inloggen op de admin panel op poort `81` en je webdiensten toevoegen als proxy hosts.
+Om Nginx Proxy Manager te installeren, heb je [Docker](../../container/docker/docker.md) en [Docker Compose](../../container/docker/docker-compose.md) nodig. Je kunt een [YAML](../../programming/yaml.md)-bestand maken met de configuratie voor de Nginx Proxy Manager container en deze uitvoeren met docker-compose. Daarna kun je inloggen op de admin panel op poort `81` en je webdiensten toevoegen als proxy hosts.
 
-![NPM](../_assets/images/npm.png)
+![NPM](../../_assets/images/npm.png)
 
 ## Vergelijking met Traefik
 

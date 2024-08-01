@@ -2,7 +2,7 @@
 
 ## Wat is Raspberry Pi Imager?
 
-Raspberry Pi Imager is een hulpprogramma waarmee je eenvoudig en snel een besturingssysteem naar een microSD-kaart kunt schrijven, klaar voor gebruik met je Raspberry Pi. Je kunt kiezen uit verschillende besturingssystemen die door Raspberry Pi worden aangeboden, zoals [Raspberry Pi OS](linux/distros/rpi_os.md) en andere.
+Raspberry Pi Imager is een hulpprogramma waarmee je eenvoudig en snel een besturingssysteem naar een microSD-kaart kunt schrijven, klaar voor gebruik met je Raspberry Pi. Je kunt kiezen uit verschillende besturingssystemen die door Raspberry Pi worden aangeboden, zoals [Raspberry Pi OS](../linux/distros/rpi_os.md) en andere.
 
 Raspberry Pi Imager downloadt het geselecteerde besturingssysteem rechtstreeks van de website van Raspberry Pi en schrijft het naar de SD-kaart. Dit versnelt het proces aanzienlijk in vergelijking met de standaardmethode van downloaden, opslaan en kopiëren. Raspberry Pi Imager is beschikbaar voor Windows, macOS en Ubuntu.
 
@@ -16,7 +16,7 @@ Om Raspberry Pi Imager te gebruiken, moet je het eerst downloaden en installeren
 ### Download
 
 - Je kunt de [downloadlinks](https://www.raspberrypi.com/software/) vinden op de website van Raspberry Pi.
-- Als je al Raspberry Pi OS of een [debian](linux/distros/debian.md)-gebaseerd os gebruikt, kun je Raspberry Pi Imager ook installeren door `sudo apt install rpi-imager` te typen in een Terminal-venster.
+- Als je al Raspberry Pi OS of een [debian](../linux/distros/debian.md)-gebaseerd os gebruikt, kun je Raspberry Pi Imager ook installeren door `sudo apt install rpi-imager` te typen in een Terminal-venster.
 
 Nadat je Raspberry Pi Imager hebt geïnstalleerd, stop je de SD-kaart die je wilt gebruiken met je Raspberry Pi in de lezer en start je Raspberry Pi Imager op.
 

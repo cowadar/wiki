@@ -4,7 +4,7 @@ Een Site to Site maakt het heel gemakkelijk zoals in een bedrijf om 2 locaties v
 Daarom hebben wij er voor gekozen om onze 2 locaties met elkaar te verbinden.
 Zo kunnen we onze Docker services gemakkelijk delen zonder **over** het internet te gaan.
 
-Onze huidige configuratie is opgemaakt met [Pfsense](router/pfsense.md) en [Unifi](router/unifi.md).
+Onze huidige configuratie is opgemaakt met [Pfsense](../router/pfsense.md) en [Unifi](../router/unifi.md).
 
 Laten we eerst even oplijsten wat onze vereisten zijn om een S2S op te zetten.
 

@@ -11,9 +11,9 @@ Je kunt je eigen DNS-server draaien om meer controle te hebben over je netwerk. 
 Dit is heel simpel op te zetten door middel van volgende tools:
 
 - [PiHole](pihole.md)
-- [PfSense](router/pfsense.md)
-- [Unifi](router/unifi.md)
-- [Windows server](windows/windows_server.md)
+- [PfSense](../router/pfsense.md)
+- [Unifi](../router/unifi.md)
+- [Windows server](../../windows/windows_server.md)
 - andere dns software
 
 ### Praktische voorbeelden
@@ -54,7 +54,7 @@ Je moet je geen zorgen maken over de poorten, want elke service zal automatisch 
     Dit kan je wel op andere manieren oplossen.(comming soon).
 
 Je kan meer dan 1 suffix statisch instellen of meegeven met je DHCP release.
-Als je dit in [Wireshark](tools/wireshark.md) zou capturen zal je zien dat hij achter `tower` alle suffixen gaat plakken en dat over het netwerk naar de local dns server zal sturen. Dit kan je capturen volgens [deze](tools/wireshark.md#local-dns-prefix-capturen) methode:
+Als je dit in [Wireshark](../tools/wireshark.md) zou capturen zal je zien dat hij achter `tower` alle suffixen gaat plakken en dat over het netwerk naar de local dns server zal sturen. Dit kan je capturen volgens [deze](../tools/wireshark.md#local-dns-prefix-capturen) methode:
 
 ![foto van wireshark capture](../../_assets/images/local_dns_tower_suffix.png)
 
@@ -82,7 +82,7 @@ Het volgende voorbeeld is in docker.
 docker
 ├── appdate
 │   └── traefik
-│       └── logs 
+│       └── logs
 │           ├── access.log
 │           └── traefik.log
 └── docker-compose
@@ -254,7 +254,7 @@ docker
           filePath: "/var/log/traefik/traefik.log"
         accessLog:
           filePath: "/var/log/traefik/access.log"
-        ```   
+        ```
 
     === "config.yml"
 
@@ -319,7 +319,7 @@ docker
                 - default-headers
         ```
     === "acme.json"
-          
+
         !!! warning
             Deze file laat je leeg deze word zelf aangevult.
 

@@ -33,9 +33,9 @@ om meerdere VLANs over deze switch te sturen zal je tegen de switch moeten zette
 Standaard heeft hij Vlan1 (untagged) aangemaakt. In mijn case heb ik VLAN 10 (LAN), VLAN 20 (Servers).
 Eerst maak ik de vlans aan en zeg ik aan welke poorten deze gekoppeld moeten worden. Wat hier wel belangrijk is dat je duidelijke meegeeft per poort of dit Untagged, Tagged of Not Member is.
 
-![802.1Q](../_assets/images/d_link_.1q.png)
+![802.1Q](../../_assets/images/d_link_.1q.png)
 
 !!! note
     Zie er we wanneer die voor client of een server is. Als dit over client gaat zou ik de poort untagged voor lan nemen. En voor servers zou ik je server VLAN nemen.
 
-![802.1Q2](../_assets/images/d_link_802.1q2.png)
+![802.1Q2](../../_assets/images/d_link_802.1q2.png)

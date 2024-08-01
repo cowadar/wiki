@@ -6,12 +6,12 @@ site_url: "https://wiki.cowadar.be"
 #site_url: "https://cowadar.github.io/wiki/"
 
 # Copyright
-copyright: "&copy; 2023 Cowadar"
+copyright: "&copy; 2024 Cowadar"
 
 # Repository
 repo_name: "cowadar/wiki"
 repo_url: "https://github.com/cowadar/wiki"
-edit_uri: ""
+# edit_uri: ""
 
 # Configuration
 docs_dir: "docs"
@@ -119,34 +119,34 @@ plugins:
   - mkdocs-video
 
 extra:
-  consent:
-    title: Cookie consent
-    description: >
-      We gebruiken cookies om ook uw herhaalde bezoeken en voorkeuren te herkennen
-      om de effectiviteit van onze documentatie te meten en of gebruikers
-      vinden waarnaar ze op zoek zijn. Met uw toestemming helpt u ons om
-      onze documentatie beter te maken.
-    cookies:
-      analytics: Google
-    actions:
-      - accept
-      - manage
-    analytics:
-      provider: google
-      property: G-2XCYZRX6FS
-      feedback:
-      title: Was deze pagina nuttig?
-      ratings:
-        - icon: material/emoticon-happy-outline
-          name: Deze pagina was nuttig!
-          data: 1
-          note: >-
-            Bedankt voor je feedback!
-        - icon: material/emoticon-sad-outline
-          name: Deze pagina kan worden verbeterd
-          data: 0
-          note: >-
-            Bedankt voor je feedback! Help ons om deze pagina te verbeteren via ons <a href="https://github.com/.../issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">feedback form</a>.
+  # consent:
+  #   title: Cookie consent
+  #   description: >
+  #     We gebruiken cookies om ook uw herhaalde bezoeken en voorkeuren te herkennen
+  #     om de effectiviteit van onze documentatie te meten en of gebruikers
+  #     vinden waarnaar ze op zoek zijn. Met uw toestemming helpt u ons om
+  #     onze documentatie beter te maken.
+  #   cookies:
+  #     analytics: Google
+  #   actions:
+  #     - accept
+  #     - manage
+  #   analytics:
+  #     provider: google
+  #     property: G-2XCYZRX6FS
+  #     feedback:
+  #     title: Was deze pagina nuttig?
+  #     ratings:
+  #       - icon: material/emoticon-happy-outline
+  #         name: Deze pagina was nuttig!
+  #         data: 1
+  #         note: >-
+  #           Bedankt voor je feedback!
+  #       - icon: material/emoticon-sad-outline
+  #         name: Deze pagina kan worden verbeterd
+  #         data: 0
+  #         note: >-
+  #           Bedankt voor je feedback! Help ons om deze pagina te verbeteren via ons <a href="https://github.com/.../issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">feedback form</a>.
 
   social:
     - icon: fontawesome/brands/github

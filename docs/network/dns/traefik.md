@@ -9,10 +9,10 @@ Zie [https://doc.traefik.io/traefik/routing/routers/#certresolver](https://doc.t
 
 ![Voorbeeld cmd](../../_assets/images/traefik-reverse-proxy.png)
 
-Traefik is een reverse proxy. Dit wil zeggen dat je heel gemakkelijk verschillende services kunt bereiken vanaf het internet zonder elke keer een port forward te doen.
-De enige poort(en) die je moet openzetten is 443 (en 80). En verwijzen naar je traefik IP.
+Traefik is een reverse proxy. Dit wil zeggen dat je heel gemakkelijk verschillende services kunt bereiken vanaf het internet zonder elke keer een port open te zetten.
+De enigeste poort die je moet openzetten is 443. En verwijzen naar het toest (IP) waar Traefik op draait.
 
-In dit voorbeeld gebruiken we Unifi
+In dit voorbeeld gebruiken we een firewall van het met Unifi. Dit kan je ook perfect in de router(modem) van uw provider.
 ![Voorbeeld cmd](../../_assets/images/traefik_port_forwarding.png)
 
 Bij je DNS provider verwijs je een A record door naar je Publiek IP (dit kan ook automatisch gebeuren door [DDNS](ddns.md)).
@@ -25,10 +25,10 @@ Voor alle services gebruik je een CNAME record die verwijst naar @ (@ = jouw dom
 Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
 
 !!! info 
-    Onze Traefik gebruikt een dynamische file. Dat wilt zeggen dat je als je de config aanpast dat je niet elke keer de docker opnieuw moet genereren.
+    Onze Traefik gebruikt een dynamische file. Dat wilt zeggen dat je als je de configuratie aanpast dat je niet elke keer de docker opnieuw moet genereren.
 
 !!! info
-    Graag volgens volgende folder structuur maken.
+    Graag volgens volgende map structuur maken.
 
     ```bash
     docker
@@ -49,7 +49,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
 
     ```
 
-??? "Config files"
+??? "Configuratie bestanden"
     !!! warning
         Vergeet niet alle gegevens naar die van jou te veranderen!!
     === "docker-compose.yaml"
@@ -282,7 +282,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
 
 
 ### Run
-Als je alle bovenstaande stappen gedaan hebt voer je het volgende commado in de terminal in dezelfde folder als docker compose.
+Als je alle bovenstaande stappen gedaan hebt voer je het volgende commado in de terminal in dezelfde map als docker compose.
 ```bash
 docker compose up -d
 ``` 

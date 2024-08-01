@@ -32,5 +32,4 @@ download te laatste versie van [https://www.ventoy.net/en/download.html](https:/
 
 ## links
 
-**Website**: [https://www.ventoy.net/en/index.html](https://www.ventoy.net/en/index.html)
 **Download**: [https://www.ventoy.net/en/download.html](https://www.ventoy.net/en/download.html)

@@ -2,14 +2,28 @@
 
 ## Wat is Ventoy?
 
-Ventoy is an open source tool to create bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI files.
-With ventoy, you don't need to format the disk over and over, you just need to copy the ISO/WIM/IMG/VHD(x)/EFI files to the USB drive and boot them directly.
-You can copy many files at a time and ventoy will give you a boot menu to select them ([screenshot](https://www.ventoy.net/en/index.htmlscreenshot.html)).
-You can also browse ISO/WIM/IMG/VHD(x)/EFI files in local disks and boot them.
-x86 Legacy BIOS, IA32 UEFI, x86\_64 UEFI, ARM64 UEFI and MIPS64EL UEFI are supported in the same way.
-Most types of OS supported (Windows/WinPE/Linux/ChromeOS/Unix/VMware/Xen...)
+Ventoy is een open source tool vor het maken van een bootble USB voor ISO/WIM/IMG/VHD(x)/EFI files.
+Met ventoy hoeft u de schijf niet steeds opnieuw te formatteren, u hoeft alleen maar de ISO/WIM/IMG/VHD(x)/EFI-bestanden naar de USB-drive te kopiëren en ze direct op te starten.
+Je kunt veel bestanden tegelijk kopiëren en ventoy geeft je een opstartmenu waarin je ze kunt selecteren ([screenshot](https://www.ventoy.net/en/index.htmlscreenshot.html)).
+U kunt ook door ISO/WIM/IMG/VHD(x)/EFI-bestanden op lokale schijven bladeren en deze opstarten.
+x86 Legacy BIOS, IA32 UEFI, x86\_64 UEFI, ARM64 UEFI en MIPS64EL UEFI worden op dezelfde manier ondersteund.
+De meeste typen besturingssystemen worden ondersteund (Windows/WinPE/Linux/ChromeOS/Unix/VMware/Xen...)
+
 
 ![Ventoy screenshot](../_assets/images/ventoy.png)
+
+## Installatie
+### Download
+download te laatste versie van [https://www.ventoy.net/en/download.html](https://www.ventoy.net/en/download.html)
+
+### Installeren
+- Pak het gedownloade bestand uit.
+- Open de folder en zoek naar Ventoy2disk/VentoyGUI en open deze file
+- Selecteer de USB en druk op install.
+
+![Ventoy installatie](../_assets/images/ventoy_installatie.png)
+- achter de installatie zie je een in je verkenner een USB met de naam Ventoy. Hier drop je alle ISO files in. Deze zijn direkt booteble.
+
 
 ## links
 

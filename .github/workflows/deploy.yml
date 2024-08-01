@@ -1,4 +1,4 @@
-name: documentation
+name: Deploy documentation
 on:
   push:
     branches:
@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 jobs:
-  documentation:
+  deploy:
     name: Build documentation
     runs-on: ubuntu-latest
     steps:

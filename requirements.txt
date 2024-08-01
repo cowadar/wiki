@@ -1,3 +1,4 @@
 mkdocs-material
 mkdocs-rss-plugin
 mkdocs-awesome-pages-plugin
+mkdocs-video

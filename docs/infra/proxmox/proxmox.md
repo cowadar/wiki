@@ -248,7 +248,7 @@ qemu-img convert -p -O qcow2 vm-100.raw vm-100.qcow2
 ### Ubuntu VM Disk vergroten in Proxmox
 
 Als je in Proxmox een disk vergroot, zal deze door de OS nog niet volledig gebruikt kunnen worden.
-Daarom moeten we, na de vergroting in proxmox, deze alsnog met [GParted](../tools/gparted.md) en via de CLI resizen zodat de volledige grootte herkend kan worden door het OS.
+Daarom moeten we, na de vergroting in proxmox, deze alsnog met [GParted](../../tools/gparted.md) en via de CLI resizen zodat de volledige grootte herkend kan worden door het OS.
 
 #### 1. Virtuele machine uitzetten
 
@@ -425,7 +425,7 @@ pveam update
 
 ## Certificate Management
 
-See the [Proxmox Certificate Management](proxmox-certificate-management.md) cheat sheet.
+See the [Proxmox Certificate Management](certificate-management.md) cheat sheet.
 
 ## Container Management
 
@@ -604,7 +604,7 @@ More examples and tutorials regarding Proxmox can be found in the link list belo
 
 ## Plex on Proxmox
 
-Bekijk deze [note](misc/plex_proxmox.md) voor meer informatie om Plex via LXC te installeren op Proxmox
+Bekijk deze [note](../../misc/plex_proxmox.md) voor meer informatie om Plex via LXC te installeren op Proxmox
 
 ## Post-installatie script
 

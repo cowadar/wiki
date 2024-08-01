@@ -1,3 +1,1 @@
----
-title: Pop!_OS
----
+# Pop OS

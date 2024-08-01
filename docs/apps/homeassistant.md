@@ -4,31 +4,32 @@ title: Home Assistant
 
 ## Snippets
 
+``` yaml
 trigger:
 
 - platform: state
   entity_id: switch.half_bath_light
   from: 'off'
   to: 'on'
-
+```
 ---
-
+``` yaml
+condition:
 - condition: state
   entity_id: light.study_cans_current_value
   state: 'off'
-
+```
 ---
-
+``` yaml
 action:
-
 - service: switch.turn_off
   target:
   entity_id:
   - switch.s_outside_lights
   - switch.outside_back_patio_light
-
+```
 ---
-
+``` yaml
 alias: Estufa - 20h On, 4 off
 description: ''
 trigger:
@@ -48,7 +49,7 @@ trigger:
   target:
   entity_id: switch.0x847127fffeae874f
   mode: single
-
+```
 ---
 
 So if you have a light, and it’s entity_id is light.living_room, access any of the properties outside the attributes (or state), would be:

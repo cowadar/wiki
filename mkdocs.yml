@@ -116,6 +116,7 @@ plugins:
       lang: nl
       separator: '[\s\-\.]'
   - awesome-pages
+  - mkdocs-video
 
 extra:
   consent:

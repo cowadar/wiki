@@ -1,0 +1,6628 @@
+
+<!doctype html>
+<html lang="nl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentatie van Cowarol & Bedar">
+      
+      
+        <meta name="author" content="Cowarol, Bedar">
+      
+      
+        <link rel="canonical" href="https://wiki.cowadar.be/apps/homeassistant/">
+      
+      
+        <link rel="prev" href="../grafana/">
+      
+      
+        <link rel="next" href="../kasm/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>Home Assistant - Personal Knowledge Management</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#snippets" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Personal Knowledge Management" class="md-header__button md-logo" aria-label="Personal Knowledge Management" data-md-component="logo">
+      
+  <img src="../../_assets/images/site/cowadar_light.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Personal Knowledge Management
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home Assistant
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Zoeken" placeholder="Zoeken" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Zoeken">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Leegmaken" aria-label="Leegmaken" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Zoeken initialiseren
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cowadar/wiki" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cowadar/wiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  🏠 Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  📱 Apps
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../container/docker/docker/" class="md-tabs__link">
+          
+  
+  🐋 Containers
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../databases/mariadb/" class="md-tabs__link">
+          
+  
+  🔠 DB
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../hardware/arduino/" class="md-tabs__link">
+          
+  
+  💻 HW
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../infra/synology/" class="md-tabs__link">
+          
+  
+  🏗️ Infra
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../linux/distros/popos/customization/" class="md-tabs__link">
+          
+  
+  🐧 Linux
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../network/networking/" class="md-tabs__link">
+          
+  
+  📶 Netwerk
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../programming/github/dependabot/" class="md-tabs__link">
+          
+  
+  ⌨️ Programmeren
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tools/ansible/" class="md-tabs__link">
+          
+  
+  ⚒️ Tools
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../windows/windows/" class="md-tabs__link">
+          
+  
+  🪟 Windows
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../misc/awesome-lists/" class="md-tabs__link">
+          
+  
+  🪄 Overig
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/cowadar/" class="md-tabs__link">
+          
+  
+  🤔 Over ons
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigatie" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Personal Knowledge Management" class="md-nav__button md-logo" aria-label="Personal Knowledge Management" data-md-component="logo">
+      
+  <img src="../../_assets/images/site/cowadar_light.svg" alt="logo">
+
+    </a>
+    Personal Knowledge Management
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cowadar/wiki" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cowadar/wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🏠 Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📱 Apps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            📱 Apps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App list
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authentik/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authentik
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../discord/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fivem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fivem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google-chrome/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Google Chrome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grafana/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grafana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Home Assistant
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Home Assistant
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snippets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-2-3-4-5-6trigger-platform-state-entity_id-switchhalf_bath_light-from-off-to-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 2 3 4 5 6trigger: - platform: state entity_id: switch.half_bath_light from: &#39;off&#39; to: &#39;on&#39;
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-2-3-4condition-condition-state-entity_id-lightstudy_cans_current_value-state-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 2 3 4condition: - condition: state entity_id: light.study_cans_current_value state: &#39;off&#39;
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-2-3-4-5-6action-service-switchturn_off-target-entity_id-switchs_outside_lights-switchoutside_back_patio_light" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 2 3 4 5 6action: - service: switch.turn_off target: entity_id: - switch.s_outside_lights - switch.outside_back_patio_light
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19alias-estufa-20h-on-4-off-description-trigger-id-off-platform-time-at-120000-200000-040000-id-on-platform-time-at-160000-000000-080000-condition-action-service-switchturn_-triggerid-target-entity_id-switch0x847127fffeae874f-mode-single" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19alias: Estufa - 20h On, 4 off description: &#39;&#39; trigger: - id: &#39;off&#39; platform: time at: - &#39;12:00:00&#39; - &#39;20:00:00&#39; - &#39;04:00:00&#39; - id: &#39;on&#39; platform: time at: - &#39;16:00:00&#39; - &#39;00:00:00&#39; - &#39;08:00:00&#39; condition: [] action: - service: &#39;switch.turn\_{{ trigger.id }}&#39; target: entity_id: switch.0x847127fffeae874f mode: single
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-acos-of-1-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns acos of 1, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-as_timestamp-of-1-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns as_timestamp of 1, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-asin-of-1-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns asin of 1, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-atan-of-1-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns atan of 1, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-cos-of-1-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns cos of 1, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-10-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns 1.0, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-sin-of-1-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns sin of 1, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-sqrt-of-1-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns sqrt of 1, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-tan-of-1-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns tan of 1, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-time-10-am-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns time @ 10 am, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-log-of-1-with-base-10-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns log of 1 with base 10, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-atan2-of-1-at-2-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns atan2 of 1 at 2, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-rounds-123-down-precision-of-0-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns rounds 1.23 down precision of 0, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-log-of-1-with-base-e-because-base-2nd-argument-defaults-to-e-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns log of 1 with base e because base (2nd argument) defaults to e, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-rounds-143-to-even-with-a-precision-of-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns rounds 1.43 to even with a precision of 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#because-function-2nd-argument-defaults-to-round-to-even-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      because function (2nd argument) defaults to round-to-even, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-as_timestamp-of-1-if-fails-returns-0_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns as_timestamp of 1, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-10-if-fails-returns-0_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns 1.0, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-fully-formatted-time-string-1-second-past" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns fully formatted time string 1 second past
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#midnight-january-1st-1970-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      midnight January 1st 1970, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-fully-formatted-time-string-1-second-past_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns fully formatted time string 1 second past
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#midnight-january-1st-1970-if-fails-returns-0_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      midnight January 1st 1970, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-timestamp_utc0" class="md-nav__link">
+    <span class="md-ellipsis">
+      {{ 1 | timestamp_utc(0) }}
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-time-10-am-if-fails-returns-0_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns time @ 10 am, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-rounds-123-down-precision-of-0-if-fails-returns-0_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns rounds 1.23 down precision of 0, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-rounds-123-down-precision-of-0-if-fails-returns-0_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns rounds 1.23 down precision of 0, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-000001-which-is-1-second-past" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns "00:00:01", which is 1 second past
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#midnight-january-1st-1970-in-local-time-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      midnight January 1st 1970 in local time, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-000001-which-is-1-second-past_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns "00:00:01", which is 1 second past
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#midnight-january-1st-1970-in-local-time-local_time-defaults-to-true-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      midnight January 1st 1970 in local time (local_time defaults to True), if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swap-the-case-of-the-result-string-this-flag-works-only-with-certain-conversion-specifier-characters-and-of-these-it-is-only-really-useful-with-z" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swap the case of the result string. (This flag works only with certain conversion specifier characters, and of these, it is only really useful with %Z.)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Swap the case of the result string. (This flag works only with certain conversion specifier characters, and of these, it is only really useful with %Z.)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_-null-means-the-statistic_id-is-orphaned-_" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_ NULL means the statistic_id is orphaned _/
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kasm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kasm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../makeMKV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MakeMKV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mkdocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs_material/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nginx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nginx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../npm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installeer node.js &amp; npm op Ubuntu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../portainer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Portainer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prometheus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prometheus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pterodactyl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pterodactyl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rancher/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rancher
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tailscale/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tailscale
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../teleport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teleport
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../traefik/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Traefik
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unmanic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unmanic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vault/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HashiCorp Vault
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vaultwarden/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vaultwarden
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🐋 Containers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            🐋 Containers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Docker
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/docker/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/docker/docker-compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker-compose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/docker/docker-file/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dockerfile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/docker/docker-networking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/kubernetes/helm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Helm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/kubernetes/k3s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    K3S
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/kubernetes/k9s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    K9s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/kubernetes/kind/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kind
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/kubernetes/kubectl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubectl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/kubernetes/kubernetes-dns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes DNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/kubernetes/kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🔠 DB
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            🔠 DB
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/mariadb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mariadb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/mysql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/postgres/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PostgreSQL Cheat-Sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/sqlite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQLite Cheat-Sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    💻 HW
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            💻 HW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/arduino/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arduino
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/raspberry_pi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raspberry Pi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🏗️ Infra
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            🏗️ Infra
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infra/synology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infra/unraid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unraid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infra/zfs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ZFS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Proxmox
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Proxmox
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infra/proxmox/certificate-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proxmox Certificate Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infra/proxmox/docker_lxc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installatie van Docker in een LXC container (turnkey-core) op Proxmox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infra/proxmox/proxmox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proxmox Cheat-Sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infra/proxmox/proxmox_terraform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proxmox Terraform Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infra/proxmox/tips/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Voordat ik iets op Proxmox doe, doe ik eerst...
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Truenas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Truenas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infra/truenas/truenas-scale/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TrueNAS Scale
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infra/truenas/truenas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TrueNAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🐧 Linux
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            🐧 Linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Distros
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Distros
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_1" id="__nav_7_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pop!_OS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Pop!_OS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/distros/popos/customization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pop!_OS changes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/distros/popos/keyboard-shortcuts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Keyboard Shortcuts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/distros/popos/popos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pop OS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/distros/centos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CentOS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/distros/debian/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debian
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/distros/fedora/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fedora
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/distros/rpi_os/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raspberry Pi OS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/distros/ubuntu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/cron/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cron
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/environment-variables-in-linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment Variables in Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/find/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Find commando
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/flatpak/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pop!_OS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/gnome/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gnome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/gpu-passtrough/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GPU Passtrough
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/grep/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grep
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/netplan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Netplan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/nfs_share/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nfs share
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/parallel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parallel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/rsync/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rsync
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/snippets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux snippets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/ssh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/ufw/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UFW (uncomplicated firewall)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/user/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📶 Netwerk
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            📶 Netwerk
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/networking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/twisted-pair-cables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Twisted Pair Cables Cheat-Sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dns
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Dns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/dns/cloudflare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloudflare
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/dns/ddns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DDNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/dns/dns-record-mailserver/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mail Server DNS Records Cheat-Sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/dns/dns-record-types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DNS Record Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/dns/dns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/dns/local_dns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Local DNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/dns/npm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nginx Proxy Manager (NPM)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/dns/pihole/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pihole
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/dns/test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/dns/tls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TLS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/dns/traefik/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Treafik
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/dns/udp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UDP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/dns/unbound/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unbound
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Protocols
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            Protocols
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/protocols/smtp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SMTP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/protocols/tcp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TCP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/protocols/tls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TLS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/protocols/udp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UDP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Router
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            Router
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/router/pfsense/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PFSense
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/router/unifi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unifi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Switch
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_6">
+            <span class="md-nav__icon md-icon"></span>
+            Switch
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/switch/cisco/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cisco
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/switch/d_link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    D-link
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_7">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/tools/wireshark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wireshark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_8" id="__nav_8_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Vpn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_8">
+            <span class="md-nav__icon md-icon"></span>
+            Vpn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/vpn/cloudflare-tunnels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloudflare Tunnel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/vpn/s2s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Site to Site (S2S)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/vpn/tailscale/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tailscale
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/vpn/vpn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VPN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/vpn/wireguard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WireGuard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ⌨️ Programmeren
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            ⌨️ Programmeren
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Github
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            Github
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/github/dependabot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dependabot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/github/gh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/github/git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/github/git_branch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Brancheregels (Bescherm je Git-branches) - YouTube
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/github/git_cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git cheatsheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/github/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/github/github_actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/github/github_codescanning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github Codescanning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/github/github_copilot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github Copilot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/github/github_discussions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github Discussions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/github/github_mobile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github Mobile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/github/github_secretscanning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github Secretscanning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/github/github_sponsors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github Sponsors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/github/pull_requests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pull Requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/github/submodules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with submodules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/programming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/yaml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    YAML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_6" id="__nav_9_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Gatsby
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6">
+            <span class="md-nav__icon md-icon"></span>
+            Gatsby
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/gatsby/gatsby/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gatsby Setup and Usage Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ⚒️ Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            ⚒️ Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ansible/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ansible
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/balena-etcher/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Balena Etcher
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/bitwarden/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bitwarden
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/chocolatey/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chocolatey
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/gparted/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gparted
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/nmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NMap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/openssh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenSSH Cheat-Sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/openssl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenSSL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/rpi-imager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raspberry Pi Imager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/rufus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rufus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/starship/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Starship Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/terraform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terraform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/usb_installation_media/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    USB Installation Media
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/vagrant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vagrant Cheat-Sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ventoy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ventoy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/vscode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSCode (Visual Studio Code)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/wsl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WSL Cheat-Sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_19" id="__nav_10_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dotfiles
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_19">
+            <span class="md-nav__icon md-icon"></span>
+            Dotfiles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/dotfiles/dotfiles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dotfiles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/dotfiles/ohmyzsh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Oh My ZSH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🪟 Windows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            🪟 Windows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/windows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microsoft Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/chocolatey/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chocolatey
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/environment-variables-in-windows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment Variables in Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/msdos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MS-DOS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/powershell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PowerShell Cheat-Sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/windows-terminal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows terminal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/windows_server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/wsl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WSL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_9" id="__nav_11_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Games
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_9">
+            <span class="md-nav__icon md-icon"></span>
+            Games
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/games/gta5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grand Teft Auto V
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🪄 Overig
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            🪄 Overig
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/awesome-lists/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Awesome Lists
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/http-status-codes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTTP Status Codes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/plex_proxmox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plex on Proxmox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🤔 Over ons
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            🤔 Over ons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/cowadar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cowadar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/bedar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bedar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/cowarol/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cowarol
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snippets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-2-3-4-5-6trigger-platform-state-entity_id-switchhalf_bath_light-from-off-to-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 2 3 4 5 6trigger: - platform: state entity_id: switch.half_bath_light from: &#39;off&#39; to: &#39;on&#39;
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-2-3-4condition-condition-state-entity_id-lightstudy_cans_current_value-state-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 2 3 4condition: - condition: state entity_id: light.study_cans_current_value state: &#39;off&#39;
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-2-3-4-5-6action-service-switchturn_off-target-entity_id-switchs_outside_lights-switchoutside_back_patio_light" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 2 3 4 5 6action: - service: switch.turn_off target: entity_id: - switch.s_outside_lights - switch.outside_back_patio_light
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19alias-estufa-20h-on-4-off-description-trigger-id-off-platform-time-at-120000-200000-040000-id-on-platform-time-at-160000-000000-080000-condition-action-service-switchturn_-triggerid-target-entity_id-switch0x847127fffeae874f-mode-single" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19alias: Estufa - 20h On, 4 off description: &#39;&#39; trigger: - id: &#39;off&#39; platform: time at: - &#39;12:00:00&#39; - &#39;20:00:00&#39; - &#39;04:00:00&#39; - id: &#39;on&#39; platform: time at: - &#39;16:00:00&#39; - &#39;00:00:00&#39; - &#39;08:00:00&#39; condition: [] action: - service: &#39;switch.turn\_{{ trigger.id }}&#39; target: entity_id: switch.0x847127fffeae874f mode: single
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-acos-of-1-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns acos of 1, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-as_timestamp-of-1-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns as_timestamp of 1, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-asin-of-1-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns asin of 1, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-atan-of-1-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns atan of 1, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-cos-of-1-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns cos of 1, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-10-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns 1.0, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-sin-of-1-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns sin of 1, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-sqrt-of-1-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns sqrt of 1, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-tan-of-1-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns tan of 1, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-time-10-am-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns time @ 10 am, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-log-of-1-with-base-10-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns log of 1 with base 10, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-atan2-of-1-at-2-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns atan2 of 1 at 2, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-rounds-123-down-precision-of-0-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns rounds 1.23 down precision of 0, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-log-of-1-with-base-e-because-base-2nd-argument-defaults-to-e-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns log of 1 with base e because base (2nd argument) defaults to e, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-rounds-143-to-even-with-a-precision-of-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns rounds 1.43 to even with a precision of 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#because-function-2nd-argument-defaults-to-round-to-even-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      because function (2nd argument) defaults to round-to-even, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-as_timestamp-of-1-if-fails-returns-0_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns as_timestamp of 1, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-10-if-fails-returns-0_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns 1.0, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-fully-formatted-time-string-1-second-past" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns fully formatted time string 1 second past
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#midnight-january-1st-1970-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      midnight January 1st 1970, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-fully-formatted-time-string-1-second-past_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns fully formatted time string 1 second past
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#midnight-january-1st-1970-if-fails-returns-0_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      midnight January 1st 1970, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-timestamp_utc0" class="md-nav__link">
+    <span class="md-ellipsis">
+      {{ 1 | timestamp_utc(0) }}
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-time-10-am-if-fails-returns-0_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns time @ 10 am, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-rounds-123-down-precision-of-0-if-fails-returns-0_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns rounds 1.23 down precision of 0, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-rounds-123-down-precision-of-0-if-fails-returns-0_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns rounds 1.23 down precision of 0, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-000001-which-is-1-second-past" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns "00:00:01", which is 1 second past
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#midnight-january-1st-1970-in-local-time-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      midnight January 1st 1970 in local time, if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-000001-which-is-1-second-past_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns "00:00:01", which is 1 second past
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#midnight-january-1st-1970-in-local-time-local_time-defaults-to-true-if-fails-returns-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      midnight January 1st 1970 in local time (local_time defaults to True), if fails returns 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swap-the-case-of-the-result-string-this-flag-works-only-with-certain-conversion-specifier-characters-and-of-these-it-is-only-really-useful-with-z" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swap the case of the result string. (This flag works only with certain conversion specifier characters, and of these, it is only really useful with %Z.)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Swap the case of the result string. (This flag works only with certain conversion specifier characters, and of these, it is only really useful with %Z.)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_-null-means-the-statistic_id-is-orphaned-_" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_ NULL means the statistic_id is orphaned _/
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<div><h2 id="snippets">Snippets<a class="headerlink" href="#snippets" title="Permanent link">¶</a></h2>
+<h2 id="1-2-3-4-5-6trigger-platform-state-entity_id-switchhalf_bath_light-from-off-to-on"><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">trigger</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="nt">entity_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">switch.half_bath_light</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="nt">from</span><span class="p">:</span><span class="w"> </span><span class="s">'off'</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="s">'on'</span>
+</code></pre></div></td></tr></table></div><a class="headerlink" href="#1-2-3-4-5-6trigger-platform-state-entity_id-switchhalf_bath_light-from-off-to-on" title="Permanent link">¶</a></h2>
+<h2 id="1-2-3-4condition-condition-state-entity_id-lightstudy_cans_current_value-state-off"><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">condition</span><span class="p">:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="nt">entity_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light.study_cans_current_value</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">'off'</span>
+</code></pre></div></td></tr></table></div><a class="headerlink" href="#1-2-3-4condition-condition-state-entity_id-lightstudy_cans_current_value-state-off" title="Permanent link">¶</a></h2>
+<h2 id="1-2-3-4-5-6action-service-switchturn_off-target-entity_id-switchs_outside_lights-switchoutside_back_patio_light"><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">action</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">switch.turn_off</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="nt">target</span><span class="p">:</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="nt">entity_id</span><span class="p">:</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">switch.s_outside_lights</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">switch.outside_back_patio_light</span>
+</code></pre></div></td></tr></table></div><a class="headerlink" href="#1-2-3-4-5-6action-service-switchturn_off-target-entity_id-switchs_outside_lights-switchoutside_back_patio_light" title="Permanent link">¶</a></h2>
+<h2 id="1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19alias-estufa-20h-on-4-off-description-trigger-id-off-platform-time-at-120000-200000-040000-id-on-platform-time-at-160000-000000-080000-condition-action-service-switchturn_-triggerid-target-entity_id-switch0x847127fffeae874f-mode-single"><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Estufa - 20h On, 4 off</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">''</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nt">trigger</span><span class="p">:</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="s">'off'</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">time</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">  </span><span class="nt">at</span><span class="p">:</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'12:00:00'</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'20:00:00'</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'04:00:00'</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="s">'on'</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">time</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">  </span><span class="nt">at</span><span class="p">:</span><span class="w"> </span><span class="err">-</span><span class="w"> </span><span class="s">'16:00:00'</span><span class="w"> </span><span class="err">-</span><span class="w"> </span><span class="s">'00:00:00'</span><span class="w"> </span><span class="err">-</span><span class="w"> </span><span class="s">'08:00:00'</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">  </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">  </span><span class="nt">action</span><span class="p">:</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="s">'switch.turn\_{{</span><span class="nv"> </span><span class="s">trigger.id</span><span class="nv"> </span><span class="s">}}'</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">  </span><span class="nt">target</span><span class="p">:</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">  </span><span class="nt">entity_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">switch.0x847127fffeae874f</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">  </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">single</span>
+</code></pre></div></td></tr></table></div><a class="headerlink" href="#1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19alias-estufa-20h-on-4-off-description-trigger-id-off-platform-time-at-120000-200000-040000-id-on-platform-time-at-160000-000000-080000-condition-action-service-switchturn_-triggerid-target-entity_id-switch0x847127fffeae874f-mode-single" title="Permanent link">¶</a></h2>
+<p>So if you have a light, and it’s entity_id is light.living_room, access any of the properties outside the attributes (or state), would be:</p>
+<p>{{ states.light.living_room.entity_id }} # for the entity_id 'light.living_room'
+{{ states.light.living_room.domain }} # for the domain 'light'
+{{ states.light.living_room.object_id }} # for the object_id 'living_room'
+{{ states.light.living_room.name }} # for the friendly_name 'Living Room'
+{{ states.light.living_room.last_updated }} # for the datetime object in UTC when it was last updated
+{{ states.light.living_room.last_changed }} # for the datetime object in UTC when the state last changed</p>
+<hr>
+<p>alias: Example Sunrise Sunset Light
+description: ''
+trigger:</p>
+<ul>
+<li>id: '100'
+  platform: sun
+  event: sunset
+  offset: '-01:00:00'</li>
+<li>id: '30'
+  platform: time
+  at: '23:30:00'</li>
+<li>id: '0'
+  platform: sun
+  event: sunrise
+  offset: '-02:00:00'
+  condition: []
+  action:</li>
+<li>service: light.turn_on
+  target:
+  entity_id: light.outdoor_front
+  data:
+  brightness_pct: '{{ trigger.id }}'
+  mode: single</li>
+</ul>
+<hr>
+<p>alias: activate light for 930pm till 10pm
+description: ''
+trigger:</p>
+<ul>
+<li>id: 'on'
+  platform: time
+  at: '21:30:00'</li>
+<li>id: 'off'
+  platform: time
+  at: '22:00:00'
+  condition: []
+  action:</li>
+<li>choose:</li>
+<li>conditions:<ul>
+<li>"{{ trigger.id == 'on' }}"</li>
+<li>"{{ is_state('input_boolean.garage_light', 'on') }}"
+  sequence:</li>
+<li>service: switch.turn_on
+  target:
+  entity_id: switch.m_garage_light</li>
+</ul>
+</li>
+<li>conditions: "{{ trigger.id == 'off' }}"
+    sequence: - service: switch.turn_off
+    target:
+    entity_id: switch.m_garage_light
+    default: []
+    mode: single</li>
+</ul>
+<hr>
+<p>trigger:
+platform: template
+value_template: "{{ states('input_datetime.test_last_timestamp')|as_datetime + timedelta(days = 10) &gt; now() }}"</p>
+<hr>
+<p>chopping off first and last character:</p>
+<p>{% set ev = "'66.5'" %}
+{{ ev | int }} # will = 0
+{{ ev')[1:-1] | int }} # will = 66</p>
+<hr>
+<ul>
+<li>id: '1586455192037'
+  alias: School - Robin Wake Music
+  description: ''
+  trigger:</li>
+<li>platform: time
+    at: '05:55:00'
+    condition:</li>
+<li>"{{ is_state('calendar.noschool', 'off') }}"</li>
+<li>"{{ is_state('binary_sensor.workday_sensor', 'on') }}"</li>
+<li>"{{ 1 &lt;= now().isoweekday() &lt;= 5 }}"
+    action:</li>
+<li>variables:
+    entities: - switch.echo_spare_room - switch.robin_tree_1 - light.robin - light.robin_closet - light.robin_chandelier
+    songs: - 'Cover me in Sunshine' - 'See it, say it, sign it by Jack Hartman' - 'overweight hedgehog' - 'where are you Christmas' - '90 days' - 'hurt by johnny cash' - 'Fishy on Me' - 'someone you loved' - 'frantic by Metallica' - 'Enter sandman' - 'We built this city' - 'Welcome to the Jungle'</li>
+<li>service: homeassistant.turn_on
+    target:
+    entity_id: '{{ entities }}'</li>
+<li>repeat:
+    until: "{{ now().hour == 6 and now().minute == 30 }}"
+    sequence: - service: notify.alexa_media
+    data:
+    data:
+    type: announce
+    message: "It is {{ now().strftime('%H:%M')}}, time To Wake up"
+    target: - media_player.robin_echo - service: media_player.play_media
+    target:
+    entity_id: media_player.robin_echo
+    data:
+    media_content_type: AMAZON_MUSIC
+    media_content_id: '{{ songs | random }}' - wait_for_trigger: - platform: state
+    entity_id: media_player.robin_echo
+    from: 'playing'
+    mode: single</li>
+</ul>
+<p>https://community.home-assistant.io/t/how-to-trigger-automation-if-another-automations-actions-ran-to-many-times-in-a-given-time-frame/384689/9</p>
+<hr>
+<p>{% set month = now().month + 6 %}
+{{ month }}
+{{ month in [1,12] }} FALSE
+{{ (now() + timedelta(days=150)).month }}
+{{ (now() + timedelta(days=150)).month in [5,6,7,8,9] }} TRUE (in january)</p>
+<hr>
+<p>{% set date_string = "[“Jan 23 2022”]" %}
+{{ date_string }}
+{{ as_timestamp(strptime(date_string[2:-2], "%b %d %Y")) | timestamp_local}}</p>
+<hr>
+<p>Alternative to calculating duration
+Up {{ states("sensor.ha_uptime") | as_datetime | relative_time }}</p>
+<p>vs this</p>
+<p>{% set boot = as_timestamp(states('sensor.ha_uptime'))|int %}
+{% set duration = as_timestamp(utcnow())|int - boot %}
+{{ timedelta(seconds=duration) }}</p>
+<hr>
+<p>https://community.home-assistant.io/t/updating-templates-with-the-new-default-values-in-2021-10-x/346198#2-arguments</p>
+<p>Using them as a function.
+2 arguments
+breakdown</p>
+<p>{{ function(value_for_argument1, value_for_argument2) }}</p>
+<p>examples</p>
+<h1 id="returns-acos-of-1-if-fails-returns-0">returns acos of 1, if fails returns 0<a class="headerlink" href="#returns-acos-of-1-if-fails-returns-0" title="Permanent link">¶</a></h1>
+<p>{{ acos(1, 0) }}</p>
+<h1 id="returns-as_timestamp-of-1-if-fails-returns-0">returns as_timestamp of 1, if fails returns 0<a class="headerlink" href="#returns-as_timestamp-of-1-if-fails-returns-0" title="Permanent link">¶</a></h1>
+<p>{{ as_timestamp(1, 0) }}</p>
+<h1 id="returns-asin-of-1-if-fails-returns-0">returns asin of 1, if fails returns 0<a class="headerlink" href="#returns-asin-of-1-if-fails-returns-0" title="Permanent link">¶</a></h1>
+<p>{{ asin(1, 0) }}</p>
+<h1 id="returns-atan-of-1-if-fails-returns-0">returns atan of 1, if fails returns 0<a class="headerlink" href="#returns-atan-of-1-if-fails-returns-0" title="Permanent link">¶</a></h1>
+<p>{{ atan(1, 0) }}</p>
+<h1 id="returns-cos-of-1-if-fails-returns-0">returns cos of 1, if fails returns 0<a class="headerlink" href="#returns-cos-of-1-if-fails-returns-0" title="Permanent link">¶</a></h1>
+<p>{{ cos(1, 0) }}</p>
+<h1 id="returns-10-if-fails-returns-0">returns 1.0, if fails returns 0<a class="headerlink" href="#returns-10-if-fails-returns-0" title="Permanent link">¶</a></h1>
+<p>{{ float('1', 0) }}</p>
+<h1 id="returns-sin-of-1-if-fails-returns-0">returns sin of 1, if fails returns 0<a class="headerlink" href="#returns-sin-of-1-if-fails-returns-0" title="Permanent link">¶</a></h1>
+<p>{{ sin(1, 0) }}</p>
+<h1 id="returns-sqrt-of-1-if-fails-returns-0">returns sqrt of 1, if fails returns 0<a class="headerlink" href="#returns-sqrt-of-1-if-fails-returns-0" title="Permanent link">¶</a></h1>
+<p>{{ sqrt(1, 0) }}</p>
+<h1 id="returns-tan-of-1-if-fails-returns-0">returns tan of 1, if fails returns 0<a class="headerlink" href="#returns-tan-of-1-if-fails-returns-0" title="Permanent link">¶</a></h1>
+<p>{{ tan(1, 0) }}</p>
+<p>===========================================================
+3 arguments
+breakdown</p>
+<p>{{ function(value_for_argument1, value_for_argument2, value_for_argument3) }}</p>
+<p>examples</p>
+<h1 id="returns-time-10-am-if-fails-returns-0">returns time @ 10 am, if fails returns 0<a class="headerlink" href="#returns-time-10-am-if-fails-returns-0" title="Permanent link">¶</a></h1>
+<p>{{ strptime("10:00", "%H:%M", 0) }}</p>
+<h1 id="returns-log-of-1-with-base-10-if-fails-returns-0">returns log of 1 with base 10, if fails returns 0<a class="headerlink" href="#returns-log-of-1-with-base-10-if-fails-returns-0" title="Permanent link">¶</a></h1>
+<p>{{ log(1, 10, 0) }}</p>
+<h1 id="returns-atan2-of-1-at-2-if-fails-returns-0">returns atan2 of 1 at 2, if fails returns 0<a class="headerlink" href="#returns-atan2-of-1-at-2-if-fails-returns-0" title="Permanent link">¶</a></h1>
+<p>{{ atan2(1, 2, 0) }}</p>
+<h1 id="returns-rounds-123-down-precision-of-0-if-fails-returns-0">returns rounds 1.23 down precision of 0, if fails returns 0<a class="headerlink" href="#returns-rounds-123-down-precision-of-0-if-fails-returns-0" title="Permanent link">¶</a></h1>
+<p>{{ round(1.43, "floor", 0) }}</p>
+<p>===========================================================
+3 arguments but omitting the 2<sup>nd</sup> argument
+breakdown</p>
+<p>{{ function(value_for_argument1, argument3 = value_for_argument3) }}</p>
+<p>examples</p>
+<h1 id="returns-log-of-1-with-base-e-because-base-2nd-argument-defaults-to-e-if-fails-returns-0">returns log of 1 with base e because base (2<sup>nd</sup> argument) defaults to e, if fails returns 0<a class="headerlink" href="#returns-log-of-1-with-base-e-because-base-2nd-argument-defaults-to-e-if-fails-returns-0" title="Permanent link">¶</a></h1>
+<p>{{ log(1, default = 0) }}</p>
+<h1 id="returns-rounds-143-to-even-with-a-precision-of-0">returns rounds 1.43 to even with a precision of 0<a class="headerlink" href="#returns-rounds-143-to-even-with-a-precision-of-0" title="Permanent link">¶</a></h1>
+<h1 id="because-function-2nd-argument-defaults-to-round-to-even-if-fails-returns-0">because function (2<sup>nd</sup> argument) defaults to round-to-even, if fails returns 0<a class="headerlink" href="#because-function-2nd-argument-defaults-to-round-to-even-if-fails-returns-0" title="Permanent link">¶</a></h1>
+<p>{{ round(1.43, default = 0) }}</p>
+<p>===========================================================
+Using them as filters</p>
+<p>2 arguments
+breakdown</p>
+<p>{{ value_for_argument1 | function(value_for_argument2) }}</p>
+<p>examples</p>
+<h1 id="returns-as_timestamp-of-1-if-fails-returns-0_1">returns as_timestamp of 1, if fails returns 0<a class="headerlink" href="#returns-as_timestamp-of-1-if-fails-returns-0_1" title="Permanent link">¶</a></h1>
+<p>{{ 1 | as_timestamp(0) }}</p>
+<h1 id="returns-10-if-fails-returns-0_1">returns 1.0, if fails returns 0<a class="headerlink" href="#returns-10-if-fails-returns-0_1" title="Permanent link">¶</a></h1>
+<p>{{ '1' | float(0) }}</p>
+<h1 id="returns-fully-formatted-time-string-1-second-past">returns fully formatted time string 1 second past<a class="headerlink" href="#returns-fully-formatted-time-string-1-second-past" title="Permanent link">¶</a></h1>
+<h1 id="midnight-january-1st-1970-if-fails-returns-0">midnight January 1<sup>st</sup> 1970, if fails returns 0<a class="headerlink" href="#midnight-january-1st-1970-if-fails-returns-0" title="Permanent link">¶</a></h1>
+<p>{{ 1 | timestamp_local(0) }}</p>
+<h1 id="returns-fully-formatted-time-string-1-second-past_1">returns fully formatted time string 1 second past<a class="headerlink" href="#returns-fully-formatted-time-string-1-second-past_1" title="Permanent link">¶</a></h1>
+<h1 id="midnight-january-1st-1970-if-fails-returns-0_1">midnight January 1<sup>st</sup> 1970, if fails returns 0<a class="headerlink" href="#midnight-january-1st-1970-if-fails-returns-0_1" title="Permanent link">¶</a></h1>
+<h1 id="1-timestamp_utc0">{{ 1 | timestamp_utc(0) }}<a class="headerlink" href="#1-timestamp_utc0" title="Permanent link">¶</a></h1>
+<p>3 arguments
+breakdown</p>
+<p>{{ value_for_argument1 | function(value_for_argument2, value_for_argument3) }}</p>
+<p>examples</p>
+<h1 id="returns-time-10-am-if-fails-returns-0_1">returns time @ 10 am, if fails returns 0<a class="headerlink" href="#returns-time-10-am-if-fails-returns-0_1" title="Permanent link">¶</a></h1>
+<p>{{ "10:00" | strptime("%H:%M", 0) }}</p>
+<h1 id="returns-rounds-123-down-precision-of-0-if-fails-returns-0_1">returns rounds 1.23 down precision of 0, if fails returns 0<a class="headerlink" href="#returns-rounds-123-down-precision-of-0-if-fails-returns-0_1" title="Permanent link">¶</a></h1>
+<p>{{ 1.43 | round("floor", 0) }}</p>
+<p>===========================================================</p>
+<p>3 arguments but omitting the 2<sup>nd</sup> argument
+breakdown</p>
+<p>{{ value_for_argument1 | function(argument3 = value_for_argument3) }}</p>
+<p>examples</p>
+<h1 id="returns-rounds-123-down-precision-of-0-if-fails-returns-0_2">returns rounds 1.23 down precision of 0, if fails returns 0<a class="headerlink" href="#returns-rounds-123-down-precision-of-0-if-fails-returns-0_2" title="Permanent link">¶</a></h1>
+<p>{{ 1.43 | round(default=0) }}</p>
+<p>===========================================================</p>
+<p>4 arguments
+breakdown</p>
+<p>{{ value_for_argument1 | function(value_for_argument2, value_for_argument3, value_for_argument4) }}</p>
+<p>examples</p>
+<h1 id="returns-000001-which-is-1-second-past">returns "00:00:01", which is 1 second past<a class="headerlink" href="#returns-000001-which-is-1-second-past" title="Permanent link">¶</a></h1>
+<h1 id="midnight-january-1st-1970-in-local-time-if-fails-returns-0">midnight January 1<sup>st</sup> 1970 in local time, if fails returns 0<a class="headerlink" href="#midnight-january-1st-1970-in-local-time-if-fails-returns-0" title="Permanent link">¶</a></h1>
+<p>{{ 1 | timestamp_custom("%H:%M:%S", True, 0) }}</p>
+<p>===========================================================
+4 arguments omitting the 3<sup>rd</sup> argument
+breakdown</p>
+<p>{{ value_for_argument1 | function(value_for_argument2, value_for_argument3, value_for_argument4) }}</p>
+<p>examples</p>
+<h1 id="returns-000001-which-is-1-second-past_1">returns "00:00:01", which is 1 second past<a class="headerlink" href="#returns-000001-which-is-1-second-past_1" title="Permanent link">¶</a></h1>
+<h1 id="midnight-january-1st-1970-in-local-time-local_time-defaults-to-true-if-fails-returns-0">midnight January 1<sup>st</sup> 1970 in local time (local_time defaults to True), if fails returns 0<a class="headerlink" href="#midnight-january-1st-1970-in-local-time-local_time-defaults-to-true-if-fails-returns-0" title="Permanent link">¶</a></h1>
+<p>{{ 1 | timestamp_custom("%H:%M:%S", default = 0) }}</p>
+<hr>
+<p>Virtual Power Sensors based on on-off/% brightness</p>
+<p>https://community.home-assistant.io/t/powercalc-virtual-power-sensors/318515</p>
+<hr>
+<p>https://community.home-assistant.io/t/only-allow-automation-to-trigger-once-a-day/390097</p>
+<ul>
+<li>condition: template
+  # Only run if more than 6 hours (21,600 sec) since it last ran
+  value_template: '{{(as_timestamp(now()) - as_timestamp(state_attr("automation.<automation id>", "last_triggered") | default(0)) | int &gt; 21600 )}}'</automation></li>
+</ul>
+<hr>
+<p>{% set directions = [ 'N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW', 'N'] -%}
+{{ directions[(states('sensor.dwd_wind_bearing') | int(0) / 22.5) | round(0) | int] }}</p>
+<hr>
+<p>Could somebody help me trying to understand how could I extract information from curl query bellow.
+Im intrested only the price value</p>
+<p>curl -X GET “https://dashboard.elering.ee/api/nps/price/EE/current 3” -H “accept: /”</p>
+<p>sensor:</p>
+<ul>
+<li>platform: rest
+  resource: https://dashboard.elering.ee/api/nps/price/EE/current
+  name: Elering
+  value_template: "{{ value_json['data'][0]['price'] }}"
+  unit_of_measurement: '€'</li>
+</ul>
+<hr>
+<p>id: '1643570261869'
+alias: play tv in the kitchen in the morning when sensor sees me
+description: ''
+trigger:</p>
+<ul>
+<li>type: motion
+  platform: device
+  device_id: 7a19b2c869a28edaf40ba6c0d0d1a925
+  entity_id: binary_sensor.kitchen_sensor_motion
+  domain: binary_sensor
+  condition:</li>
+<li>condition: time
+  after: '05:00:00'
+  before: '09:30:00'
+  action:</li>
+<li>service: remote.send_command
+  data:
+  device: kitchen tv
+  command: power
+  target:
+  device_id: 1276592bc45474738b30066b2516c4f0</li>
+<li>service: androidtv.adb_command
+  data:
+  command: am force-stop de.cyberdream.iptv.tv.player
+  target:
+  device_id: 1276592bc45474738b30066b2516c4f0</li>
+<li>delay:
+  hours: 0
+  minutes: 0
+  seconds: 0
+  milliseconds: 500</li>
+<li>service: media_player.select_source
+  data:
+  source: de.cyberdream.iptv.tv.player
+  target:
+  entity_id: media_player.kitchen_gtv
+  mode: restart
+  Basically, you want it to execute its actions only if the value of the automation’s last_triggered is before 05:00 today. If the value is after 05:00 that means it has already triggered once today.</li>
+</ul>
+<p>The condition to achieve this is simple:</p>
+<p>condition:</p>
+<ul>
+<li>condition: time
+  after: '05:00:00'
+  before: '09:30:00'</li>
+<li>"{{ state_attr(this.entity_id, 'last_triggered') | default(today_at(), true) &lt; today_at('05:00') }}"</li>
+</ul>
+<hr>
+<p>TIME
+https://community.home-assistant.io/t/the-epic-time-conversion-and-manipulation-thread/85786/3</p>
+<p>as_timestamp() - converts a properly formatted date/time string to a Unix Epoch representation.
+timestamp_custom() - converts a UNIX Epoch timestamp into a custom date/time string = unix_epoch_timestamp|timestamp_custom(format)</p>
+<p>Directive Meaning Example Notes</p>
+<p>%a Weekday as locale’s abbreviated name.
+Sun, Mon, …, Sat (en_US);
+So, Mo, …, Sa (de_DE)(1)
+%A Weekday as locale’s full name.
+Sunday, Monday, …, Saturday (en_US);
+Sonntag, Montag, …, Samstag (de_DE)
+%w Weekday as a decimal number, where 0 is Sunday and 6 is Saturday. 0, 1, …, 6
+%d Day of the month as a zero-padded decimal number. 01, 02, …, 31
+%-d Day of the month as a decimal number. 1, 2, ... 31
+%b Month as locale’s abbreviated name.
+Jan, Feb, …, Dec (en_US);
+Jan, Feb, …, Dez (de_DE)
+%B Month as locale’s full name.
+January, February, …, December (en_US);
+Januar, Februar, …, Dezember (de_DE)
+%m Month as a zero-padded decimal number. 01, 02, …, 12
+%-m Month as a decimal number. 1, 2, ... 12
+%y Year without century as a zero-padded decimal number. 00, 01, …, 99
+%Y Year with century as a decimal number. 0001, 0002, …, 2013, 2014, …, 9998, 9999
+%H Hour (24-hour clock) as a zero-padded decimal number. 00, 01, …, 23
+%-H Hour (24-hour clock) as a decimal number. 0, 1, 2, ... 23
+%I Hour (12-hour clock) as a zero-padded decimal number. 01, 02, …, 12
+%-I Hour (12-hour clock) as a decimal number. 1, 2, ... 12
+%p Locale’s equivalent of either AM or PM.
+AM, PM (en_US);
+am, pm (de_DE)
+%M Minute as a zero-padded decimal number. 00, 01, …, 59
+%-M Minute as a decimal number. 0, 1, 2, .. 59 (can go to 61 to account for leap seconds)
+%S Second as a zero-padded decimal number. 00, 01, …, 59 (can go to 61 to account for leap seconds)
+%-S Second as a decimal number. 0, 1, 2, .. 59
+%f Microsecond as a decimal number, zero-padded on the left. 000000, 000001, …, 999999
+%z UTC offset in the form +HHMM or -HHMM (empty string if the the object is naive). (empty), +0000, -0400, +1030
+%Z Time zone name (empty string if the object is naive). (empty), UTC, EST, CST
+%j Day of the year as a zero-padded decimal number. 001, 002, …, 366
+%-j Day of the year as a decimal number. 1, 2, ... 366
+%U Week number of the year (Sunday as the first day of the week) as a zero padded decimal number. All days in a new year preceding the first Sunday are considered to be in week 0. 00, 01, …, 53
+%W Week number of the year (Monday as the first day of the week) as a decimal number. All days in a new year preceding the first Monday are considered to be in week 0. 00, 01, …, 53
+%c Locale’s appropriate date and time representation.
+Tue Aug 16 21:30:00 1988 (en_US);
+Di 16 Aug 21:30:00 1988 (de_DE)
+%x Locale’s appropriate date representation.
+08/16/88 (None);
+08/16/1988 (en_US);
+16.08.1988 (de_DE)
+%X Locale’s appropriate time representation.
+21:30:00 (en_US);
+21:30:00 (de_DE)
+%% A literal '%' character. %</p>
+<p>The following work also but they aren't listed in the official python documentation:</p>
+<p>%D date in month/day/year (ex Jan 1<sup>st</sup>, 2008 = 01/01/08) ?
+%s date &amp; time as a UNIX Epoch timestamp ?
+%C century ??
+%e same as %d??
+%F date in year-month-day
+%g year in what format? same as %y?
+%G same as %Y?
+%h abbreviated month. same as %b?
+%k same as %-H or %-I?
+%l " " "
+%P Locale’s equivalent of either am or pm like %p above but lowercase ?
+%r time as hour:minute:second AM/PM
+%R time as hour:minute
+%T time as hour:minute:second
+%u UTC hour
+%V week number of the year. same as %U or %W ??</p>
+<p>For the items marked with a ? without further testing I can't figure out which value it is.</p>
+<p>--</p>
+<p>The following flag characters are permitted between the '%' character and the conversion specifier character:</p>
+<p>_ (underscore) Pad a numeric result string with spaces.</p>
+<ul>
+<li>(dash) Do not pad a numeric result string.</li>
+</ul>
+<p>0 Pad a numeric result string with zeros even if the conversion specifier character uses space-padding by default.</p>
+<p>^ Convert alphabetic characters in result string to uppercase.</p>
+<h1 id="swap-the-case-of-the-result-string-this-flag-works-only-with-certain-conversion-specifier-characters-and-of-these-it-is-only-really-useful-with-z">Swap the case of the result string. (This flag works only with certain conversion specifier characters, and of these, it is only really useful with %Z.)<a class="headerlink" href="#swap-the-case-of-the-result-string-this-flag-works-only-with-certain-conversion-specifier-characters-and-of-these-it-is-only-really-useful-with-z" title="Permanent link">¶</a></h1>
+<hr>
+<p>Trigger on a counter. https://community.home-assistant.io/t/how-to-create-a-trigger-with-every-counter-increment/395059</p>
+<ul>
+<li>alias: Google TV Counter
+  trigger:</li>
+<li>platform: state
+    entity_id: counter.google_tv_counter
+    to:
+    condition: "{{ trigger.from_state.state | int &lt; trigger.to_state.state | int }}"</li>
+</ul>
+<hr>
+<p>{{ states.light.study_cans_current_value.last_changed }}
+{{ states.light.study_cans_current_value.last_changed | as_timestamp }}
+{{ ((utcnow() | as_timestamp - (states.light.study_cans_current_value.last_changed | as_timestamp)) / 60) | round(0) }}
+{{ as_timestamp(20220415, 0) }}</p>
+<p>{{ as_local(now() | as_timestamp | as_datetime) }}
+{{ states('input_number.zone1') | int }}
+{{ as_local( (now() | as_timestamp + states('input_number.zone1') | float * 3600 )| as_datetime ) }}</p>
+<p>{{ states('sensor.sunrise') }}
+{{ as_local((states('sensor.sunrise') | as_timestamp + 3600|int ) | as_datetime)}}
+{{ as_local((states('sensor.sunrise') | as_timestamp + 5400|int ) | as_datetime)}}
+{{ as_local((states('sensor.sunrise') | as_timestamp + 9000|int ) | as_datetime)}}
+{{ as_local((states('sensor.sunrise') | as_timestamp + 10800|int ) | as_datetime)}}
+{{ as_local((states('sensor.sunrise') | as_timestamp + 14400|int ) | as_datetime)}}
+{{ as_local((states('sensor.sunrise') | as_timestamp + 16200|int ) | as_datetime)}}
+{{ as_local((states('sensor.sunrise') | as_timestamp + 19800|int ) | as_datetime)}}</p>
+<hr>
+<p>1.- Create a sensor which accounts for the time some binary sensor is 'on’</p>
+<p>sensor:</p>
+<ul>
+<li>platform: history_stats
+  name: Time Boiler On
+  entity_id: binary_sensor.led_boiler
+  state: 'on'
+  type: time
+  start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+  end: '{{ now() }}'</li>
+</ul>
+<p>2.- Create a utility meter to reset the values daily, weekly, monthly,…</p>
+<p>utility_meter:
+boiler_daily_usage:
+source: sensor.time_boiler_on
+cycle: daily</p>
+<p>3.- Customize the utility so that you can benefit from the long-term statistics</p>
+<p>homeassistant:
+[...]
+customize: # Add an entry for each entity that you want to overwrite.
+sensor.boiler_daily_usage:
+state_class: measurement</p>
+<hr>
+<p>https://community.home-assistant.io/t/statistics-fix-issue-large-amount-of-data/419728</p>
+<p>For displaying data, I used the SQLite Web Add-on (GitHub - hassio-addons/addon-sqlite-web: SQLite Web - Home Assistant Community Add-ons) :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">entity_id</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">THEN</span><span class="w"> </span><span class="s1">'Orphaned'</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">ELSE</span><span class="w"> </span><span class="s1">'OK'</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">END</span><span class="w"> </span><span class="n">Issue</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="n">entity_id</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="n">statistic_id</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="k">FROM</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">entity_id</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">statistic_id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">statistics_meta</span><span class="w"> </span><span class="n">a</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="s1">'states'</span><span class="w"> </span><span class="n">b</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="k">ON</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">statistic_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">entity_id</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">statistic_id</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="k">WHERE</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="n">entity_id</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">"statistics_meta"</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">entity_id</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">statistic_id</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">statistics_meta</span><span class="w"> </span><span class="n">a</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="s1">'states'</span><span class="w"> </span><span class="n">b</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="k">ON</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">statistic_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">entity_id</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">statistic_id</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">entity_id</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="_-null-means-the-statistic_id-is-orphaned-_">/_ NULL means the statistic_id is orphaned _/<a class="headerlink" href="#_-null-means-the-statistic_id-is-orphaned-_" title="Permanent link">¶</a></h2>
+<p>now() inside a template will cause the template to update on the minute, no rate_limit.
+entities inside a template will cause to update when the entity changes state, no rate_limit.
+using states without a domain will cause the template to update on all state changes, however it’s rate limited to 1 update a minute.
+using states.<domain> will cause the template to update on all state changes, however it’s rate limited to 1 update a second</domain></p>
+<hr>
+<p>https://community.home-assistant.io/t/dew-point-temperature-sensor-my-configuration-yaml/432445</p>
+<p>Dew from temperature/humidity sensor.</p>
+<p>sensor:</p>
+<ul>
+<li>platform: template
+  sensors:
+  temp_dew_XY:
+  value_template: &gt;-
+  {% set T, RH = states('sensor.temperature_X'), states('sensor.humidity_Y') %}
+  {% if not T or RH == 'unknown' -%}
+  'unknown'
+  {%- else %}
+  {% set T = T | float %}
+  {% set RH = RH | float %}
+  {% set a = 6.1121 | float %}
+  {% set b = 18.678 | float %}
+  {% set c = 257.14 | float %}
+  {% set d = 234.5 | float %}
+  {% set e = 2.718281828 | float %}<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>  {% set P = a*e**((b-T/d)*(T/(c+T))) | float %}
+  {% set gamma = log((RH / 100)*e**((b-T/d)*(T/(c+T)))) | float %}
+  {% set dew_temp = ((c * gamma) / (b - gamma))|round(3) %}
+  {{ dew_temp}}
+{% endif %}
+</code></pre></div></td></tr></table></div>
+<p>unit_of_measurement: "°C"
+  friendly_name: "Dew Temperature"</p>
+</li>
+</ul>
+<hr>
+<p>entities:
+battery:
+consumption: sensor.daily_kwh_from_battery
+production: sensor.daily_kwh_to_battery
+battery_charge: sensor.powerwall_charge
+grid:
+consumption: sensor.daily_kwh_from_grid
+production: sensor.daily_kwh_to_grid
+solar: sensor.daily_kwh_produced</p>
+<hr></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Terug naar boven
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 Cowadar
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/cowadar" target="_blank" rel="noopener" title="Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.youtube.com/channel/UCnDHClzKX1bgx8h2JW_Oa_A" target="_blank" rel="noopener" title="Youtube" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.code.copy", "search.suggest", "search.highlight", "header.autohide"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

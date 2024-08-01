@@ -25,7 +25,7 @@ Dit is heel simpel op te zetten door middel van volgende tools:
 ## PiHole
 
 Hier heb ik een voorbeeld van hoe je dit configureerd in PiHole.
-![Pihole_local_dns](../../
+![Pihole_local_dns](../../_assets/images/pihole_local_dns.png)
 ## Suffix
 
 ### Wat is een DNS Suffix?
@@ -50,7 +50,7 @@ Je moet je geen zorgen maken over de poorten, want elke service zal automatisch 
 - minecraft: `25565`
 
 !!! note
-    Local DNS houd geen rekening met custom poorten voor een service.
+    Bovenstaande stapppen houden geen rekening met custom poorten voor een service.
     Dit kan je wel op andere manieren oplossen.(comming soon).
 
 Je kan meer dan 1 suffix statisch instellen of meegeven met je DHCP release.
@@ -63,3 +63,25 @@ Als je dit in [Wireshark](../tools/wireshark.md) zou capturen zal je zien dat hi
 
 
 ## Local DNS met custom poorten
+In ons voorbeeld gebruiken we [Traefik](traefik.md). Als je de configuratie van deze pagina gedaan hebt is het maar een kleine uitbreiding.
+
+### configuratie Pihole
+Wij gebruiken Pihole maar dit kan met elke DNS software.
+
+Er zijn 2 manieren maar die komen op het zelfde neer. Ofwel gebruik je jouw real domain. ofwel gebruik je .local, .lan, etc.
+Deze kan je ook vermelden in de Labels.
+
+In pihole ga je naar Local DNS --> DNS/CNAME Record.
+Bij A record vul je een url in die verwijst naar je traefik met het IP van traefik uiteraard.
+Bij CNAME vul je in wat je wilt intyppen als url die doorverwijst naar de URL van traefik.
+![Voorbeeld cmd](../../_assets/images/pihole_local_dns_a_record.png)
+![pihole_cname](../../_assets/images/pihole_cname.png)
+
+
+!!! tip
+    Wat er exact gebeurd is wanneer jij in je browser cloud.cowadar.be zou intyppen dan word eerst het verkeer naar Pihole gestuurd.
+    Pihole zegt aah ik heb een CNAME met de naam "cloud.cowadar.be" die vervolgens ziet dat dit word dooverwezen naar "rpi5.cowdar.be".
+    deze gaat dan op zijn beurt "rpi5.cowadat.be" resolven en ziet in zijn eigen database dat dit verwijst naar 172.16.0.50.
+    Het verkeer word nu naar jouw traefik gestuurd. Nu is het aan Treafik om met het verkeer om te gaan.
+    !!! warning
+        als je met je real domain heb gewerkt zal de URL waarsschijnlijk bestaan. Is de url niet aanwezig zal je deze handmatig moeten toevoegen in de config file van [Traefik](traefik.md). Of mee in de labels zetten.

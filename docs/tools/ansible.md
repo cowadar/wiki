@@ -86,7 +86,7 @@ ansible
 - roles/: Hierin kunnen Ansible-rollen worden opgeslagen, die taken groeperen per functie.
 - ansible.cfg: De configuratie van Ansible, waarin instellingen zoals de locatie van het inventory-bestand en logbestanden staan.
 - inventory.md: Bevat een lijst van de servers en hun groepen die door Ansible worden beheerd.
-- test_playbook.yml: Een test-playbook om de basisfunctionaliteit van Ansible te controleren.
+- first_playbook.yml: Een test-playbook om de basisfunctionaliteit van Ansible te controleren.
 
 ??? "Configuratie bestanden"
     !!! warning

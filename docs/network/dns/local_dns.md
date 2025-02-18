@@ -85,3 +85,9 @@ Bij CNAME vul je in wat je wilt intyppen als url die doorverwijst naar de URL va
     Het verkeer word nu naar jouw traefik gestuurd. Nu is het aan Treafik om met het verkeer om te gaan.
     !!! warning
         als je met je real domain heb gewerkt zal de URL waarsschijnlijk bestaan. Is de url niet aanwezig zal je deze handmatig moeten toevoegen in de config file van [Traefik](traefik.md). Of mee in de labels zetten.
+
+
+
+# Coming Soon
+!!! note
+    dns via Unifi + custom domain + fallback dns WAN

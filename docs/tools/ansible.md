@@ -35,7 +35,14 @@ Je kunt ook variabelen specificeren per groep of per host.
 
 ### Playbook-bestand
 
-Een playbook is een YAML-bestand waarin je de taken definieert die Ansible moet uitvoeren. Een voorbeeld van een eenvoudig playbook:
+Een Ansible playbook is een YAML-bestand dat een serie taken beschrijft die uitgevoerd moeten worden op een of meer remote machines. Het wordt gebruikt om geautomatiseerde configuraties, implementaties of beheertaken uit te voeren op servers of andere systemen. Playbooks in Ansible zijn zeer flexibel en kunnen worden gebruikt om allerlei systemen in te stellen, van het installeren van software tot het configureren van netwerkinstellingen of het beheren van beveiligingsinstellingen.
+
+!!! note 
+    Een playbook bestaat meestal uit de volgende elementen:
+    - Hosts: Dit is een reeks taken die uitgevoerd moeten worden op een specifieke groep hosts.
+    - Tasks: Dit zijn de specifieke acties die moeten worden uitgevoerd (zoals het installeren van software, het kopiëren van bestanden, enz.).
+    - Modules: Ansible maakt gebruik van modules die de uitvoering van een taak mogelijk maken, zoals de apt-module voor het installeren van pakketten op Debian-gebaseerde systemen.
+    - Variables: Dit maakt het mogelijk om dynamische configuraties te gebruiken.
 
 ```bash
 ---
@@ -85,6 +92,7 @@ ansible
     !!! warning
         Dit is een voorbeeld!!
     === "ansible.cfg"
+
 
         ```yaml
             [defaults]

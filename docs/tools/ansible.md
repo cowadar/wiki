@@ -8,15 +8,20 @@ Om een Ansible-script te laten draaien, zijn er een aantal essentiële onderdele
 
 ```bash
 ansible
-  ├── inventory.md
+  ├── inventory.txt
   └── playbook.yml
 ```
 !!! note
-    De config file van Ansible staat op "/etc/ansible/ansible.cfg". Deze word overschreven als je deze in de root van je ansible playbook folder zet.
-    
+    De config file van Ansible staat op "/etc/ansible/ansible.cfg". Deze word overschreven als je deze in de root folder van je ansible playbook zet.
+
 ### Inventory-bestand
 
 Het inventory-bestand bevat een lijst van servers waarop Ansible taken moet uitvoeren. Een eenvoudig voorbeeld:
+
+!!! note
+    Je kan heel makkelijk servers groeperen door deze op te lijsten zoals hieronder bij [webservers].
+    Hier heb kan je ook nog  [webservers:vars] aan toevoegen en dan gaan alle [webservers] deze variabele gebruiken.
+    Als je dan in je Playbook deze aanspreekt onders "hosts:" zullen enkel deze servers aangesproken worden.
 
 ```bash 
 [webservers]
@@ -55,18 +60,18 @@ ansible-playbook -i inventory playbook.yml
 ```
 
 ## Benodigdheden voor het uitvoeren van een Ansible-script (advanced)
-Als je heb bovenste onder de knie hebt kan je ook dit proberen voor een groter Ansible script.
+Als je het bovenste onder de knie hebt kunnen we je ansible script wat geavanceerd maken.
 ```bash
 ansible
    ├── ansible.cfg
    ├── files
    │   └── sudoers_USER
-   ├── inventory.md
+   ├── inventory.txt
    ├── roles
    │   └── playbook1
    │       └── tasks
    │           └── main.yml
-   └── test_playbook.yml
+   └── first_playbook.yml
 ```
 ### Uitleg van de bestanden en mappen:
 
@@ -85,11 +90,13 @@ ansible
             [defaults]
             interpreter_python=auto_silent
             host_key_checking=false
+
+            INVENTORY = inventory.txt
         ```
     === "sudoers_USER"
         
         ```yaml
-            cowarol ALL=(ALL) NOPASSWD: ALL
+            USER ALL=(ALL) NOPASSWD: ALL
         ```
     === "inventory.md"
 
@@ -161,7 +168,7 @@ ansible
                 - '"successfully authenticated" not in ssh_test.stderr'
             changed_when: false
         ```
-    === "test_playbook.yaml"
+    === "first_playbook.yaml"
         ```yaml
             ---
             - name: docker Playbook
@@ -245,16 +252,16 @@ ansible
         ssh -T git@github.com
         ```
 
-        ## test script
+        ## Test het script
         Eerst en vooral zul je dit commano moeten losslaten omdat je nog geen connectie hebt met de nodes.
         Dit Commandoe vraagt achter het gebruikers wachtwoord en het root wachwoord
         > [!warning]  
         > Voor je verdergaat ga je naar de inventory.md file en pas je jouw waardes aan.
         > De test_playbook spreekt de [docker] aan.
         ```bash
-        ansible-playbook  test_playbook.yml -u USER -k -K
+        ansible-playbook  first_playbook.yml -u USER -k -K
         ```
         Als Voorig scipt succesvol is uitgevoerd zou je vanaf nu je script kunnen starten met
         ```bash
-        ansible-playbook  test_playbook.yml
+        ansible-playbook  first_playbook.yml
         ```

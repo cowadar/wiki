@@ -6,10 +6,11 @@ Ansible is een open-source automatiseringstool waarmee je IT-taken zoals configu
 
 Om een Ansible-script te laten draaien, zijn er een aantal essentiële onderdelen:
 
+```bash
 ansible
   ├── inventory.md
   └── playbook.yml
-
+```
 ### Inventory-bestand
 
 Het inventory-bestand bevat een lijst van servers waarop Ansible taken moet uitvoeren. Een eenvoudig voorbeeld:
@@ -51,6 +52,7 @@ ansible-playbook -i inventory playbook.yml
 
 ## Benodigdheden voor het uitvoeren van een Ansible-script (advanced)
 Als je heb bovenste onder de knie hebt kan je ook dit proberen voor een groter Ansible script.
+```bash
 ansible
    ├── ansible.cfg
    ├── files
@@ -61,7 +63,7 @@ ansible
    │       └── tasks
    │           └── main.yml
    └── test_playbook.yml
-
+```
 ### Uitleg van de bestanden en mappen:
 
 - files/: Bevat bestanden die nodig zijn voor de configuratie of implementatie.
@@ -191,7 +193,7 @@ ansible
         ```
 
         ## installeer ssh keys
-        Je kan ansible laten werken zonder ssh keys. Met ssh keys is die gemakkelijker en gebruiks vriendelijker.
+        Je kan ansible laten werken zonder ssh keys. Met ssh keys is dit gemakkelijker en gebruiks vriendelijker.
 
         ### Installeer een ssh key voor ansible
         Dit doen we om een ssh key voor ansible te reserveren.

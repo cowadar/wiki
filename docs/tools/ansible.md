@@ -190,8 +190,6 @@ ansible
 
     === "readme.md"
         # Ansible
-        > [!NOTE]  
-        > Voor meer informatie https://wiki.cowadar.be/tools/ansible/
 
         ## Installeer Ansible
         Voor je begint zijn er een aandere stappen die je moet doorlopen.

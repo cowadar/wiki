@@ -1,6 +1,6 @@
 # Ansible
 ## Wat is Ansible
-Ansible is een open-source automatiseringstool waarmee je IT-taken zoals configuratiebeheer, software-implementatie en applicatie-orkestratie eenvoudig kunt uitvoeren. Het werkt agentloos, wat betekent dat je geen extra software hoeft te installeren op de beheerde systemen. Ansible gebruikt YAML-bestanden (playbooks) om instructies te definiëren en maakt verbinding via SSH of WinRM om taken uit te voeren. Het is populair vanwege de eenvoudige syntaxis, schaalbaarheid en efficiëntie in het beheren van zowel kleine als grote IT-omgevingen.
+Ansible is een open-source automatiseringstool waarmee je IT-taken zoals configuratiebeheer, software-implementatie en applicatie-orkestratie eenvoudig kunt uitvoeren. Het werkt agentloos, wat betekent dat je geen extra software hoeft te installeren op de beheerde systemen. Ansible gebruikt YAML-bestanden (playbooks) om instructies te definiëren en maakt verbinding via SSH om taken uit te voeren. Het is populair vanwege de eenvoudige syntaxis, schaalbaarheid en efficiëntie in het beheren van zowel kleine als grote IT-omgevingen.
 
 ## Benodigdheden voor het uitvoeren van een Ansible-script (easy)
 
@@ -11,11 +11,15 @@ ansible
   ├── inventory.md
   └── playbook.yml
 ```
+!!! note
+    De config file van Ansible staat op "/etc/ansible/ansible.cfg". Deze word overschreven als je deze in de root van je ansible playbook folder zet.
+    
 ### Inventory-bestand
 
 Het inventory-bestand bevat een lijst van servers waarop Ansible taken moet uitvoeren. Een eenvoudig voorbeeld:
 
-```bash [webservers]
+```bash 
+[webservers]
 server1.example.com
 server2.example.com
 

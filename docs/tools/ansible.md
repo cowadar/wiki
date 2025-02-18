@@ -158,7 +158,16 @@ ansible
             changed_when: false
         ```
     === "test_playbook.yaml"
+        ```yaml
+            ---
+            - name: docker Playbook
+            hosts: docker
+            gather_facts: true
+            become: false
+            roles:
+                - install_ssh-ansible
 
+        ```
 
     === "readme.md"
         # Ansible

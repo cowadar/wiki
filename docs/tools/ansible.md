@@ -118,7 +118,7 @@ ansible
             - name: add USER to sudoers
             become: true
             copy:
-                src: sudoers_cowarol
+                src: sudoers_USER
                 dest: /etc/sudoers.d/USER
                 owner: root
                 group: root

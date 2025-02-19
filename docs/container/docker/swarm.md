@@ -81,7 +81,7 @@ services:
             - swarm-network
 
 networks:
-  swarm-traefik:
+  swarm-network:
     external: true
 ```
 

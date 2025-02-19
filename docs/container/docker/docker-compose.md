@@ -43,3 +43,59 @@ services:
 ```
 
 Deze volumes worden vaak opgeslagen in `/var/lib/docker/volumes`.
+
+
+## Ful Docker compose (easy)
+
+Docker Compose is een tool waarmee je meerdere Docker-containers kunt definiëren en beheren via een docker-compose.yml-bestand. Hiermee kun je eenvoudig complete applicaties met meerdere services (zoals databases, backends en frontends) opstarten met één commando.
+
+🔹 Belangrijkste functies:
+
+- Definieert containers en hun configuratie in YAML.
+- Start alles met "docker compose up".
+- Beheert netwerken, volumes en afhankelijkheden automatisch.
+
+🚀 Kort gezegd: Docker Compose maakt het eenvoudiger om multi-container applicaties te beheren!
+
+
+### voobeeld
+laten we een opstelling maken om het te verduidelijken.
+maak deze struktuur.
+
+```bash
+docker
+  └── docker-compose
+      └──docker-compose.yml
+```
+
+
+```yaml docker-compose.yml
+services:
+  mariadb:
+    image: lscr.io/linuxserver/mariadb:latest
+    container_name: mariadb
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - MYSQL_ROOT_PASSWORD=ROOT_ACCESS_PASSWORD
+      - MYSQL_DATABASE=USER_DB_NAME #optional
+      - MYSQL_USER=MYSQL_USER #optional
+      - MYSQL_PASSWORD=DATABASE_PASSWORD #optional
+      - REMOTE_SQL=http://URL1/your.sql,https://URL2/your.sql #optional
+    volumes:
+      - ./mariadb/config:/config
+    ports:
+      - 3306:3306
+    restart: unless-stopped
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    networks:
+      - default
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
+```

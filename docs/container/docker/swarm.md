@@ -17,8 +17,19 @@ In Docker Swarm zijn er twee soorten nodes:
 ``` mermaid
 stateDiagram-v2
   state fork_state <<manager>>
+    Manager
     Manager <--> Node1
     Manager <--> Node2
+```
+
+``` mermaid
+stateDiagram-v2
+  state fork_state <<manager>>
+    Manager1 <--> Node1
+    Manager1 <--> Node2
+    Manager1 <--> Manager2
+    Manager2 <--> Node3
+    Manager2 <--> Node
 ```
 
 #### 1. Manager Node 🏗️  

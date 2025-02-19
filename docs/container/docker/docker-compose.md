@@ -152,17 +152,17 @@ Ze het volgend in de "docker-compose.yaml"
     === "docker-compose.yaml"
 
         ```yaml
-            ########################### NETWORKS ######################
-            # U kunt de onderstaande netwerk-subnetten (10.250.x.0/24) naar wens aanpassen.
-            networks:
-              default:
-                driver: bridge
-                ipam:
-                  config:
-                    - subnet: 10.250.10.0/24
-            include:
-              ########################### SERVICES ####################
-              - compose/database.yml
+        ########################### NETWORKS ######################
+        # U kunt de onderstaande netwerk-subnetten (10.250.x.0/24) naar wens aanpassen.
+        networks:
+          default:
+            driver: bridge
+            ipam:
+              config:
+                - subnet: 10.250.10.0/24
+        include:
+          ########################### SERVICES ####################
+          - compose/database.yml
         ```
     === "database.yml"
 
@@ -204,32 +204,32 @@ Ze het volgend in de "docker-compose.yaml"
             Dit bestand is voorzien om al je veriabele in te zetten.
 
         ```yaml
-          PUID=1000 # User ID
-          PGID=1003 #Group ID
-          UMASK=002
-          TZ=Europe/Brussels # Timezone
-          USERDIR=/home/<USER> # User directory
-          DOCKERDIR=/home/<USER>/docker # Docker directory
-          COMPOSEDIR=/home/<USER>/docker/docker-compose/compose # Compose directory
-          APPDATADIR=/home/<USER>/docker/appdata # Appdata directory
-          DATADIR=/data
-          LOCAL_IPS=127.0.0.1/32,10.0.0.0/8,192.168.0.0/16,172.16.0.0/16 # Lokale IP's
-          CLOUDFLARE_IPS=173.245.48.0/20,103.21.244.0/22,103.22.200.0/22,103.31.4.0/22,141.101.64.0/18,108.162.192.0/18,190.93.240.0/20,188.114.96.0/20,197.234.240.0/22,198.41.128.0/17,162.158.0.0/15,104.16.0.0/13,104.24.0.0/14,172.64.0.0/13,131.0.72.0/22 # Cloudflare IP's
-          DOMAINNAME_1=<DOMAIN.COM> # Domeinnaam
-          HOSTNAME=<HOSTNAME> # Hostname
-          USERNAME=<USER>
-          PASSWORD=<PASSWORD>
+        PUID=1000 # User ID
+        PGID=1003 #Group ID
+        UMASK=002
+        TZ=Europe/Brussels # Timezone
+        USERDIR=/home/<USER> # User directory
+        DOCKERDIR=/home/<USER>/docker # Docker directory
+        COMPOSEDIR=/home/<USER>/docker/docker-compose/compose # Compose directory
+        APPDATADIR=/home/<USER>/docker/appdata # Appdata directory
+        DATADIR=/data
+        LOCAL_IPS=127.0.0.1/32,10.0.0.0/8,192.168.0.0/16,172.16.0.0/16 # Lokale IP's
+        CLOUDFLARE_IPS=173.245.48.0/20,103.21.244.0/22,103.22.200.0/22,103.31.4.0/22,141.101.64.0/18,108.162.192.0/18,190.93.240.0/20,188.114.96.0/20,197.234.240.0/22,198.41.128.0/17,162.158.0.0/15,104.16.0.0/13,104.24.0.0/14,172.64.0.0/13,131.0.72.0/22 # Cloudflare IP's
+        DOMAINNAME_1=<DOMAIN.COM> # Domeinnaam
+        HOSTNAME=<HOSTNAME> # Hostname
+        USERNAME=<USER>
+        PASSWORD=<PASSWORD>
 
-          ###### DATABASE #####
-          ROOTPASSWORD=<ROOTPASSWORD>
-          USER_DB_NAME=<USER_DB_NAME>
-          MYSQL_USER=<MYSQL_USER>
-          DATABASE_PASSWORD=<DATABASE_PASSWORD>
+        ###### DATABASE #####
+        ROOTPASSWORD=<ROOTPASSWORD>
+        USER_DB_NAME=<USER_DB_NAME>
+        MYSQL_USER=<MYSQL_USER>
+        DATABASE_PASSWORD=<DATABASE_PASSWORD>
 
 
 
-          ###### PORTS #####
-          MARIADB_PORT=3306
-          PHPMYADMIN_PORT=8080
+        ###### PORTS #####
+        MARIADB_PORT=3306
+        PHPMYADMIN_PORT=8080
         ```
 

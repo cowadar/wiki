@@ -121,7 +121,7 @@ sudo service libvirtd restart
 
 Nu ga je 2 schripts maken die de GPU gaan loskoppelen en terug koppelen aan je Linux device.
 !!! note
-Zet in de 2 scripts `pci_0000_01_00_0` naar jouw ID.
+    Zet in de 2 scripts `pci_0000_01_00_0` naar jouw ID.
 
 ```bash
 sudo mkdir -p /etc/libvirt/hooks/qemu.d/"VMNAME"/prepare/

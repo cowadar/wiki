@@ -14,6 +14,14 @@ Swarm is ingebouwd in Docker en eenvoudiger dan Kubernetes, maar biedt minder ge
 ### Docker Swarm opzetten
 In Docker Swarm zijn er twee soorten nodes:  
 
+``` mermaid
+stateDiagram-v2
+  state fork_state manager
+    [*] --> fork_state
+    fork_state --> State2
+    fork_state --> State3
+```
+
 #### 1. Manager Node 🏗️  
 - Beheert het cluster en verdeelt taken (orkestratie).  
 - Kan services aanmaken, schalen en beheren.  

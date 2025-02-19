@@ -18,7 +18,7 @@ In Docker Swarm zijn er twee soorten nodes:
 graph LR
   A{Manager} <--> B[Node1];
   A{Manager} <--> C[Node2];
-  A{Manager} <--> D[Node..;
+  A{Manager} <--> D[Node..];
 ```
 #### 1. Manager Node 🏗️  
 - Beheert het cluster en verdeelt taken (orkestratie).  

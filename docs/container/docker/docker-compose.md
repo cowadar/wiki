@@ -44,7 +44,7 @@ services:
 
 Deze volumes worden vaak opgeslagen in `/var/lib/docker/volumes`.
 
-## labels
+## Labels
 Docker **labels** zijn metadata-tags die je aan containers, images, volumes en netwerken kunt toevoegen. Ze helpen bij **organisatie, filtering en automatisering** binnen Docker en Docker Swarm.  
 
 ### 🔹 Gebruik  

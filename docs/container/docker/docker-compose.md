@@ -54,7 +54,7 @@ Docker **labels** zijn metadata-tags die je aan containers, images, volumes en n
 docker run --label environment=production nginx
 ```
 
-In onderstaande compose is de variabele voor de constainer zelf:
+In onderstaande compose is de variabele voor de container zelf:
 ```yml
 services:
   web:

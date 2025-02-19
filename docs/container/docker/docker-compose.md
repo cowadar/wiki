@@ -67,7 +67,7 @@ docker
   └── docker-compose.yaml
 ```
 
-Ze het volgend in de "docker-compose.yaml"
+Zet het volgend in de "docker-compose.yaml"
 ```yaml 
 services:
   mariadb:
@@ -144,7 +144,7 @@ docker
         
 ```
 
-Ze het volgend in de "docker-compose.yaml"
+Zet de volgende gegevens in de files:
 
 ??? "Configuratie bestanden"
     !!! warning

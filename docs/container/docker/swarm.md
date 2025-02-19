@@ -29,16 +29,16 @@ In Docker Swarm zijn er twee soorten nodes:
 Om een Docker swarm op te zetten heb je 2 commando`s nodig.
 Dit voor je uit op de Manager.
 ```bash
-    docker swarm init
+docker swarm init
 ```
 Nu krijg je een join code en deze plak je op de Nodes.
 Als je deze code vergeten bent kan je volgende commando uitvoeren op de manager.
 ```bash
-    docker swarm join-token worker
+docker swarm join-token worker
 ```
 Wil ke een extra manager wilt toevoegen kan je volgende commando op de huidige manage uitvoeren.
 ```bash
-    docker swarm join-token manager
+docker swarm join-token manager
 ```
 
 
@@ -69,7 +69,7 @@ Swarm-netwerken maken het makkelijk om containers dynamisch te laten samenwerken
 ### Aanmaken van een Docker Swarm overlay network
 Door een Docker Swarm network aan te maken dat ook attacheble is aan uw huide docker conainers gebruik je het volgende commando op de manager.
 ```bash
-    docker network create -d overlay --attachable my_overlay_network
+docker network create -d overlay --attachable my_overlay_network
 ```
 
 Het enigste dat je nu moet doen is dit netwerk in je compose steken van de stand alone docker containers die je met elkaar wilt laten praten.

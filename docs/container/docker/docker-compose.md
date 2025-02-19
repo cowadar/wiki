@@ -65,11 +65,11 @@ maak deze struktuur.
 ```bash
 docker
   └── docker-compose
-      └──docker-compose.yml
+      └──docker-compose.yaml
 ```
 
-
-```yaml docker-compose.yml
+Ze het volgend in de "docker-compose.yaml"
+```yaml 
 services:
   mariadb:
     image: lscr.io/linuxserver/mariadb:latest

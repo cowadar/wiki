@@ -10,7 +10,7 @@ x86 Legacy BIOS, IA32 UEFI, x86\_64 UEFI, ARM64 UEFI en MIPS64EL UEFI worden op 
 De meeste typen besturingssystemen worden ondersteund (Windows/WinPE/Linux/ChromeOS/Unix/VMware/Xen...)
 
 
-![Ventoy screenshot](../_assets/images/ventoy.png)
+![Ventoy screenshot](../../_assets/images/ventoy.png)
 
 ## Installatie
 ### Download
@@ -21,11 +21,11 @@ download te laatste versie van [https://www.ventoy.net/en/download.html](https:/
 - Open de folder en zoek naar Ventoy2disk/VentoyGUI en open deze file
 - Selecteer de USB en druk op install.
 
-![Ventoy installatie](../_assets/images/ventoy_installatie.png)
+![Ventoy installatie](../../_assets/images/ventoy_installatie.png)
 
 - Achter de installatie zie je in je verkenner een USB met de naam Ventoy. Hier drop je alle ISO files in. Deze zijn direkt booteble.
 
-![Ventoy installatie](../_assets/images/ventoy_folder.png)
+![Ventoy installatie](../../_assets/images/ventoy_folder.png)
 
 - Restart je computer of steek de USB in de desbetreffende computer en ga naar het bootmenu. Daar zie je de Ventoy USB. Druk vervolgens op de juiste ISO.
 

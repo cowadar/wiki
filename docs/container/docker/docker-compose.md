@@ -92,6 +92,12 @@ services:
       - "traefik.http.services.uptime-svc.loadbalancer.server.port=3001"
 ```
 
+Volgende Containers werken als zeker met deze soort labels:
+- Traefik
+- Homepage
+- TSDProxy
+- AutoKuma
+
 ##  Docker compose (Easy)
 
 Docker Compose is een tool waarmee je meerdere Docker-containers kunt definiëren en beheren via een docker-compose.yml-bestand. Hiermee kun je eenvoudig complete applicaties met meerdere services (zoals databases, backends en frontends) opstarten met één commando.

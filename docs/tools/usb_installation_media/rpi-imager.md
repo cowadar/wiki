@@ -26,3 +26,4 @@ Nadat je Raspberry Pi Imager hebt geïnstalleerd, stop je de SD-kaart die je wil
 4. Klik ten slotte op **Write** om het schrijfproces te starten. Dit kan enkele minuten duren, afhankelijk van de grootte van het besturingssysteem en de snelheid van je SD-kaart.
 5. Als het schrijfproces klaar is, kun je de SD-kaart uitwerpen en in je Raspberry Pi steken.
 6. Start je Raspberry Pi op en volg de instructies op het scherm om je besturingssysteem in te stellen.
+

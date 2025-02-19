@@ -124,8 +124,8 @@ Docker Compose ondersteunt variabelen en externe opslag voor flexibiliteit en be
 
 🔹 Belangrijkste functies:
 
-    Variabelen gebruiken via een .env-bestand of direct in docker-compose.yml (bijvoorbeeld ${VARIABELE} voor dynamische configuratie).
-    Opslag op andere plaatsen door volumes of bind mounts te gebruiken, zodat data persistent blijft buiten de container.
+- Variabelen gebruiken via een .env-bestand of direct in docker-compose.yml (bijvoorbeeld ${VARIABELE} voor dynamische configuratie).
+- Opslag op andere plaatsen door volumes of bind mounts te gebruiken, zodat data persistent blijft buiten de container.
 
 🚀 Kort gezegd: Docker Compose maakt het eenvoudig om multi-container applicaties te beheren, inclusief dynamische configuratie en externe opslag!
 

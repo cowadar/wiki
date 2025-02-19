@@ -21,7 +21,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 !!! note
-Bij Bedar werkte het de eerste optie niet. Daarom hebben we beide opties gegeven.
+    Bij Bedar werkte het de eerste optie niet. Daarom hebben we beide opties gegeven.
 
 Als je de ID`s van je GPU PCI slot wilt weten, gebruik je volgend commando:
 
@@ -200,4 +200,4 @@ Start VM
 Enjoy :D
 
 !!! note
-https://www.youtube.com/watch?v=qaA7kxcnXaM
+    https://www.youtube.com/watch?v=qaA7kxcnXaM

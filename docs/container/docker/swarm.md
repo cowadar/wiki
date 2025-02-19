@@ -70,7 +70,7 @@ Swarm-netwerken maken het makkelijk om containers dynamisch te laten samenwerken
 
 !!! note
     Je kan je huidige docker containers het swarm netwerk laten gebruiken.
-    Als je een Swarm network aanmaakt zien uw nodes deze pas als er een conatainer op de node deze gebruikt.
+    Als je een Swarm netwerk aanmaakt zien uw nodes deze pas als er een conatainer op de node deze gebruikt.
 
 ### Aanmaken van een Docker Swarm overlay network
 Door een Docker Swarm network aan te maken dat ook attacheble is aan uw huide docker conainers gebruik je het volgende commando op de manager.

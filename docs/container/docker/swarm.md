@@ -16,7 +16,7 @@ In Docker Swarm zijn er twee soorten nodes:
 
 ``` mermaid
 graph LR
-  A{Manager} <--> B{Node1};
+  A{Manager} <--> B[Node1];
   A{Manager} <--> C[Node2];
 ```
 #### 1. Manager Node 🏗️  

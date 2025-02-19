@@ -75,7 +75,7 @@ docker network create -d overlay --attachable my_overlay_network
 Het enigste dat je nu moet doen is dit netwerk in je compose steken van de stand alone docker containers die je met elkaar wilt laten praten.
 
 ```yaml
-Services:
+services:
     app:
         networks:
             - swarm-network

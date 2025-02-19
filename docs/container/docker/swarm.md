@@ -15,21 +15,19 @@ Swarm is ingebouwd in Docker en eenvoudiger dan Kubernetes, maar biedt minder ge
 In Docker Swarm zijn er twee soorten nodes:  
 
 ``` mermaid
-stateDiagram-v2
-  state fork_state <<manager>>
-    Manager
-    Manager <--> Node1
-    Manager <--> Node2
+graph LR
+  A[Manager] <--> B{Node1};
+  A[Manager] <--> C[Node2];
 ```
 
 ``` mermaid
-stateDiagram-v2
-  state fork_state <<manager>>
-    Manager1 <--> Node1
-    Manager1 <--> Node2
-    Manager1 <--> Manager2
-    Manager2 <--> Node3
-    Manager2 <--> Node
+graph LR
+  A[Manager] <--> B{Node1};
+  A[Manager] <--> C[Node2];
+  A[Manager] <--> D[Manager2];
+  D[Manager2] <--> E{Node3};
+  D[Manager2] <--> F[Node4];
+
 ```
 
 #### 1. Manager Node 🏗️  

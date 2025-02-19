@@ -78,7 +78,7 @@ Het enigste dat je nu moet doen is dit netwerk in je compose steken van de stand
 Services:
     app:
         networks:
-            - swarm-traefik
+            - swarm-network
 
 networks:
   swarm-traefik:

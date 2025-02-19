@@ -5,10 +5,10 @@ Docker Swarm is een clustering- en orkestratietool voor Docker-containers. Het m
 
 Belangrijkste kenmerken van Docker Swarm:
 
-    - Container Orchestratie: Automatiseert de uitrol, schaling en het beheer van containers.
-    - Load Balancing: Verdeelt verkeer automatisch over de beschikbare containers.
-    - High Availability: Containers kunnen worden gerepliceerd over meerdere nodes, zodat de applicatie blijft draaien bij uitval.
-    - Rolling Updates: Voert updates uit zonder downtime.
+- Container Orchestratie: Automatiseert de uitrol, schaling en het beheer van containers.
+- Load Balancing: Verdeelt verkeer automatisch over de beschikbare containers.
+- High Availability: Containers kunnen worden gerepliceerd over meerdere nodes, zodat de applicatie blijft draaien bij uitval.
+- Rolling Updates: Voert updates uit zonder downtime.
 
 Swarm is ingebouwd in Docker en eenvoudiger dan Kubernetes, maar biedt minder geavanceerde functies. Het is vooral handig voor kleinere tot middelgrote projecten waar eenvoud en snelle setup belangrijk zijn.
 ### Docker Swarm opzetten
@@ -64,7 +64,7 @@ Swarm-netwerken maken het makkelijk om containers dynamisch te laten samenwerken
 
 !!! note
     Je kan je huidige docker containers het swarm netwerk laten gebruiken.
-    Als je een Swarm network aanmaakt zien uw nodes deze tot er een conatainer op de node deze gebruikt.
+    Als je een Swarm network aanmaakt zien uw nodes deze pas als er een conatainer op de node deze gebruikt.
 
 ### aanmaken van een Docker Swarm overlay network
 Door een Docker Swarm network aan te maken dat ook attacheble is aan uw huide docker conainers gebruik je het volgende commando.

@@ -96,7 +96,7 @@ Om een Swarm netwerk te testen over verschillende nodes moet je het ping command
 Dat doe je met volgende commando.
 
 ```bash
-docker exec -it webserver ping <dns/ip>
+docker exec -it <conainer_name> ping <container_name/ip/DNS>
 ```
 
 

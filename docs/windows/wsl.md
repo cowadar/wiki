@@ -1,6 +1,14 @@
 ---
 title: WSL
 ---
+## install WSL
+Je kan WSL installeren door powershell op te starten als administrator en het volgende commando te plakken:
+```powershell
+wsl --install
+```
+Na dit te hebben uitgevoerd moet u uw computer opnieuw opstarten.
+Ga vervolgens naar de Microsoft Store en download uw Linux ditro naar keuze.
+
 
 ## Automatically update WSL distributions using the Windows Scheduler
 

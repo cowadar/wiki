@@ -16,20 +16,9 @@ In Docker Swarm zijn er twee soorten nodes:
 
 ``` mermaid
 graph LR
-  A[Manager] <--> B{Node1};
-  A[Manager] <--> C[Node2];
+  A{Manager} <--> B{Node1};
+  A{Manager} <--> C[Node2];
 ```
-
-``` mermaid
-graph LR
-  A[Manager] <--> B{Node1};
-  A[Manager] <--> C[Node2];
-  A[Manager] <--> D[Manager2];
-  D[Manager2] <--> E{Node3};
-  D[Manager2] <--> F[Node4];
-
-```
-
 #### 1. Manager Node 🏗️  
 - Beheert het cluster en verdeelt taken (orkestratie).  
 - Kan services aanmaken, schalen en beheren.  

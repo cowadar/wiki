@@ -67,12 +67,12 @@ Swarm-netwerken maken het makkelijk om containers dynamisch te laten samenwerken
     Als je een Swarm network aanmaakt zien uw nodes deze pas als er een conatainer op de node deze gebruikt.
 
 ### aanmaken van een Docker Swarm overlay network
-Door een Docker Swarm network aan te maken dat ook attacheble is aan uw huide docker conainers gebruik je het volgende commando.
+Door een Docker Swarm network aan te maken dat ook attacheble is aan uw huide docker conainers gebruik je het volgende commando op de manager.
 ```bash
     docker network create -d overlay --attachable my_overlay_network
 ```
 
-Het enigste dat je nu moet doen is dit netwerk in je compose steken van de stand alone docker containers die je met elkaar wilt laten praten..
+Het enigste dat je nu moet doen is dit netwerk in je compose steken van de stand alone docker containers die je met elkaar wilt laten praten.
 
 ```yaml
 Services:

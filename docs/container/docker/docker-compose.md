@@ -44,6 +44,53 @@ services:
 
 Deze volumes worden vaak opgeslagen in `/var/lib/docker/volumes`.
 
+## labels
+Docker **labels** zijn metadata-tags die je aan containers, images, volumes en netwerken kunt toevoegen. Ze helpen bij **organisatie, filtering en automatisering** binnen Docker en Docker Swarm.  
+
+### 🔹 Gebruik  
+
+#### 1. Labels toevoegen bij het aanmaken van een container  
+```bash
+docker run --label environment=production nginx
+```
+
+In onderstaande compose is de variabele voor de constainer zelf:
+```yml
+services:
+  web:
+    image: nginx
+    labels:
+      - environment=production
+```
+
+In deze compose file is de variabele voor een andere container:
+```yaml
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    container_name: uptime-kuma
+    ports:
+      - "3001:3001/tcp"
+    volumes:
+      - $APPDATADIR/uptime-kuma:/app/data
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - t3_proxy
+      - swarm-traefik
+    labels:
+      - "traefik.enable=true"
+      ## HTTP Routers
+      - "traefik.http.routers.uptime-rtr.entrypoints=websecure-internal,websecure-external"
+      - "traefik.http.routers.uptime-rtr.rule=Host(`uptime.$DOMAINNAME_1`)"
+      ## Middlewares
+      - "traefik.http.routers.uptime-rtr.middlewares=chain-no-auth@file"
+      ## HTTP Services
+      - "traefik.http.routers.uptime-rtr.service=uptime-svc"
+      - "traefik.http.services.uptime-svc.loadbalancer.server.port=3001"
+```
 
 ##  Docker compose (Easy)
 
@@ -58,8 +105,8 @@ Docker Compose is een tool waarmee je meerdere Docker-containers kunt definiëre
 🚀 Kort gezegd: Docker Compose maakt het eenvoudiger om multi-container applicaties te beheren!
 
 
-### voobeeld
-laten we een opstelling maken om het te verduidelijken.
+### voorbeeld
+Laten we een opstelling maken om het te verduidelijken.
 maak deze struktuur.
 
 ```bash

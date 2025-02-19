@@ -3,4 +3,4 @@ nav:
   - docker-compose.md
   - docker-file.md
   - docker-networking.md
-  - swarm.ms
+  - swarm.md

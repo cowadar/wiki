@@ -56,3 +56,48 @@ docker-compose up -d && docker-compose logs -f
 ```bash
 docker-compose pull && docker-compose up -d
 ```
+
+## Reverse proxy
+### Treafik
+
+```yml
+http:
+  routers:
+    crafty:
+      rule: "Host(`crafty.{{env "DOMAINNAME_1"}}`)"
+      service: "crafty"
+      tls:
+        certResolver: dns-cloudflare
+        options: tls-opts@file
+  services:
+    crafty:
+      loadBalancer:
+        servers:
+          - url: "https://172.16.7.8:8443"
+        serversTransport: "craftytransport"
+  middlewares:
+    sslheader:
+      headers:
+        customRequestHeaders:
+          X-Forwarded-Proto: "https"
+  serversTransports:
+    craftytransport:
+      insecureSkipVerify: true
+```
+OR 
+```yml
+labels:
+    - "traefik.enable=true"
+    # Router
+    - "traefik.http.routers.crafty.rule=Host(`crafty.${DOMAINNAME_1}`)"
+    - "traefik.http.routers.crafty.tls.certresolver=dns-cloudflare"
+    - "traefik.http.routers.crafty.tls.options=tls-opts@file"
+    - "traefik.http.routers.crafty.service=crafty"
+    # Service
+    - "traefik.http.services.crafty.loadbalancer.server.port=8443"
+    - "traefik.http.services.crafty.loadbalancer.serverstransport=craftytransport"
+    # Headers middleware
+    - "traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https"
+    # Server Transport voor self-signed certificates
+    - "traefik.http.servertransports.craftytransport.insecureskipverify=true"
+```

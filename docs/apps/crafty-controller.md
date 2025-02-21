@@ -18,7 +18,9 @@ Handig voor zowel particuliere als professionele serverbeheerders! 🎮🚀
 ## Intallatie
 
 ### LXC
-Wij hebben dit geinstalleerd in Proxmox met: https://community-scripts.github.io/ProxmoxVE/scripts?id=crafty-controller
+Wij hebben dit geinstalleerd in Proxmox met: 
+
+- https://community-scripts.github.io/ProxmoxVE/scripts?id=crafty-controller
 
 Na het runnen van dit script kan je direkt beginnen met servers aanmaken.
 

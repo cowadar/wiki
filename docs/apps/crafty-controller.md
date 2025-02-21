@@ -46,7 +46,7 @@ services:
         - ./docker/config:/crafty/app/config
         - ./docker/import:/crafty/import
 ```
-voer het compose bestand uit
+Voer het compose bestand uit
 ```bash
 docker-compose up -d && docker-compose logs -f
 ```

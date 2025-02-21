@@ -268,7 +268,7 @@ Als dat gadaan is stel je uw Node in (dit is het moeilijkste).
 Tijdens het aanmaken van de node verwander je 8080 --> 443 (voor https connecties).
 Vergeet zeten geen IP en poort allocatie in deze setup op te zetten. Dit zijn de poorten dat je Node kan gebruiken voor servers.
 
-### node
+### Node
 Nu krijg je een config file dat je op de node moet zetten.
 Onder "/etc/pterodactyl/config.yml"
 !!! note    

@@ -220,8 +220,8 @@ docker-compose run --rm panel php artisan p:user:make
 ### Treafik
 Eerst gaan we de reverse proxy instellen.
 Maak 2 URLs:
-- panel.DOMAIN.COM
-- node.DOMAIN.COM
+-   panel.DOMAIN.COM
+-   node.DOMAIN.COM
 
 !!! note
     Hou er rekening mee dat je een midelware moete instellen anders ga je Corsall errors krijgen.
@@ -277,7 +277,8 @@ Onder "/etc/pterodactyl/config.yml"
 
 !!! warning 
     Probeer eerst je panel url te laten staan.
-    Word je verbinding (Hartslag) niet opgezet verander dit in het lokaal op van je Panel.
+    Word je verbinding (Hartslag) niet opgezet verander dit in het lokaal ip van je Panel.
+    Ik ben in communicatie met pterodactyl om dit op te lossen.
 
 ### Testen
 Probeer nu een server op te zetten en alles Werkt

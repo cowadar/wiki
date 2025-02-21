@@ -214,3 +214,70 @@ Als je eenmaal aan je Panel kunt voor je volgende commando uit um een user te ma
 ```bash
 docker-compose run --rm panel php artisan p:user:make
 ```
+
+## Configuratie
+
+### Treafik
+Eerst gaan we de reverse proxy instellen.
+Maak 2 URLs:
+- panel.DOMAIN.COM
+- node.DOMAIN.COM
+
+!!! note
+    Hou er rekening mee dat je een midelware moete instellen anders ga je Corsall errors krijgen.
+
+    ```yaml
+    http:
+        middlewares:
+            cors-pterodactyl:
+            headers:
+                accessControlAllowMethods:
+                - "OPTIONS"
+                - "POST"
+                - "GET"
+                - "PUT"
+                - "DELETE"
+                accessControlAllowHeaders:
+                # - "*" # If you do this you get errors for "*"
+                - "Accept"
+                - "Authorization"
+                - "Cache-Control"
+                - "Content-Type"
+                - "DNT"
+                - "If-Modified-Since"
+                - "Keep-Alive"
+                - "Origin"
+                - "User-Agent"
+                - "X-Requested-With"
+                accessControlAllowOriginList:
+                - "*"
+                accessControlMaxAge: 100
+                addVaryHeader: true
+                customRequestHeaders:
+                X-Forwarded-Proto: "https"
+                Content-Type: "application/json"
+                customResponseHeaders:
+                X-Forwarded-Proto: "https"
+    ```
+
+
+### Panel configuration
+Als alles goed is ingesteld ga je naar je Panel.
+Dan Stel je uw location is.
+Als dat gadaan is stel je uw Node in (dit is het moeilijkste).
+Tijdens het aanmaken van de node verwander je 8080 --> 443 (voor https connecties).
+Vergeet zeten geen IP en poort allocatie in deze setup op te zetten. Dit zijn de poorten dat je Node kan gebruiken voor servers.
+
+### node
+Nu krijg je een config file dat je op de node moet zetten.
+Onder "/etc/pterodactyl/config.yml"
+!!! note    
+    Vrander in deze file de 443 --> 8080.
+    Dit komt omdat we hierboven moeten verwijzen naar HTTPS maar onde Deamon werkt op 8080.
+
+!!! warning 
+    Probeer eerst je panel url te laten staan.
+    Word je verbinding (Hartslag) niet opgezet verander dit in het lokaal op van je Panel.
+
+### Testen
+Probeer nu een server op te zetten en alles Werkt

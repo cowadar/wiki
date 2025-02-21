@@ -218,10 +218,11 @@ docker-compose run --rm panel php artisan p:user:make
 ## Configuratie
 
 ### Treafik
-Eerst gaan we de reverse proxy instellen.
-Maak 2 URLs:
--   panel.DOMAIN.COM
--   node.DOMAIN.COM
+Eerst gaan we de reverse proxy instellen:
+Maak 2 URLs aan:
+
+- panel.DOMAIN.COM
+- node.DOMAIN.COM
 
 !!! note
     Hou er rekening mee dat je een midelware moete instellen anders ga je Corsall errors krijgen.

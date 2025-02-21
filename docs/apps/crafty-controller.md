@@ -18,13 +18,14 @@ Handig voor zowel particuliere als professionele serverbeheerders! 🎮🚀
 ## Intallatie
 
 ### LXC
-Wij hebben dit geinstalleerd in Proxmox met: 
-
-- https://community-scripts.github.io/ProxmoxVE/scripts?id=crafty-controller
+Wij hebben dit geinstalleerd in Proxmox met [Dit](https://community-scripts.github.io/ProxmoxVE/scripts?id=crafty-controller) script
 
 Na het runnen van dit script kan je direkt beginnen met servers aanmaken.
 
 ### Docker
+!!! warning
+    Het nadeel van een Docker container is dat je de poorten zelf moet toevoegen aan het compose bestand.
+    Dus zorg ervoor dat er genoeg poorten openstaan.
 
 ```yaml
 services:

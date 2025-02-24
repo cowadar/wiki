@@ -84,7 +84,7 @@ http:
     craftytransport:
       insecureSkipVerify: true
 ```
-OR 
+Of  
 ```yml
 labels:
     - "traefik.enable=true"

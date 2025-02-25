@@ -1,5 +1,5 @@
 # Moonlight
-moonlight_panel.png
+
 ![Moonlight Panel](../_assets/images/moonlight_panel.png)
 
 Moonlight Panel is een gratis en open-source hostingpaneel dat is ontworpen om het beheer van game- en webservers te vereenvoudigen. Het biedt een snelle en responsieve gebruikersinterface, ondersteund door een efficiënte backend, waardoor gebruikers meer controle hebben over de gehoste diensten.

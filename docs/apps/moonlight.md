@@ -68,6 +68,10 @@ Maak nu zoals bij Pterodactyl allocations aan onder Server --> nodes--> node -->
 
 ### Images/ Eggs
 Deze Importeer je alle 2 onder servers --> images.
+
+!!! warning
+    Vergeet voor of na het importeren van de Images/Eggs zeker niet de juiste port Allocations te doen.
+
 **Image**
 
 Een image is een vooraf geconfigureerde besturingssysteemomgeving die als basis dient voor een server. Dit kan een Docker-image of een VM-image zijn. In hostingpanels wordt vaak Docker gebruikt, en een Docker-image bevat alles wat nodig is om een applicatie uit te voeren, zoals het besturingssysteem, bibliotheken en afhankelijkheden.
@@ -96,3 +100,10 @@ De bestaande Pterodactyl [Eggs](https://github.com/pelican-eggs/eggs/tree/master
 
 !!! warning
     Het kan zijn dat niet alle Eggs compatieble zijn.
+
+
+
+## Review
+Na het uitgebreid testen van deze service. Raad ik deze aan alle mensen aan die een hosting service thuis willen draaien.
+Je hebt allee vrijheid en een makkelijke setup. In de volgende release komt ook een Docker Compose voor nog meer vrijheid.
+De support is ook snel en goed.

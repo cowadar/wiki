@@ -12,6 +12,7 @@ Belangrijke kenmerken van Moonlight Panel zijn:
 - Privénetwerken: Isoleert subservers en kritieke API's zonder complexe firewallconfiguraties.
 - Rechtenbeheer: Biedt gedetailleerde controle over de acties die beheerders kunnen uitvoeren.
 - Diagnosesysteem: Helpt bij het snel identificeren en oplossen van problemen.
+
   [Moonlight Panel](https://moonlightpanel.xyz)
 
 Moonlight Panel is volledig on-premise, wat betekent dat alle gegevens en diensten binnen uw eigen infrastructuur blijven. Het project is oorspronkelijk ontwikkeld voor Endelon Hosting en is nu een onafhankelijk project met als doel een alles-in-één oplossing te bieden voor hostingbedrijven en gemeenschappen.

@@ -78,6 +78,7 @@ Deze Importeer je alle 2 onder servers --> images.
 Een image is een vooraf geconfigureerde besturingssysteemomgeving die als basis dient voor een server. Dit kan een Docker-image of een VM-image zijn. In hostingpanels wordt vaak Docker gebruikt, en een Docker-image bevat alles wat nodig is om een applicatie uit te voeren, zoals het besturingssysteem, bibliotheken en afhankelijkheden.
 
 Voorbeeld: Een Minecraft-server image kan een vooraf geconfigureerde versie van een Minecraft-server bevatten, zodat deze snel en consistent kan worden gedraaid binnen een container.
+
 **Egg**
 
 Een egg is een configuratiebestand of sjabloon dat wordt gebruikt binnen hostingpanels zoals Pterodactyl en Moonlight Panel om servers in te stellen. Een egg bevat instructies zoals:
@@ -87,7 +88,7 @@ Een egg is een configuratiebestand of sjabloon dat wordt gebruikt binnen hosting
 - Welke poorttoewijzingen vereist zijn
 - Welke bestanden en mappen worden gebruikt
 
-🔹 Voorbeeld: Een Minecraft Egg bepaalt welke versie van Minecraft wordt geïnstalleerd, welke poorten worden geopend, en welke startup-opdrachten worden uitgevoerd.
+Voorbeeld: Een Minecraft Egg bepaalt welke versie van Minecraft wordt geïnstalleerd, welke poorten worden geopend, en welke startup-opdrachten worden uitgevoerd.
 **Samengevat**
 
 - Image: De complete serveromgeving (bijv. een Docker-image met het OS en basissoftware).

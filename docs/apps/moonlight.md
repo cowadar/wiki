@@ -27,7 +27,7 @@ Moonlight Panel is volledig on-premise, wat betekent dat alle gegevens en dienst
 ## Installeren
 ### Panel
 In de huidge release hebben ze nog geen Docker compose file.
-voer hetvolgde uit:
+voer het volgde uit:
 ```bash
 bash <(curl https://get-moonlight.app)
 ```
@@ -42,7 +42,7 @@ Moonlight Panel --> Install
 
 En volg de standaard instellingen
 
-Als alles doorlopen is voer je het volgende uit:
+Als ales doorlopen is voer je het volgende uit:
 ```bash
 mlcli moonlight login
 ```
@@ -57,13 +57,13 @@ Nu kan je via het "ip+port" aan de webinterface en aanmelden.
 
 ### Node
 Open het admin panel en ga naar Servers => Nodes.
-Maak nu een node aan. Als je node is aangemaakt bewerk je de node en ga je naar "setup".
+Maak nu een node aan. Als je node hebt aangemaakt bewerk je de node en ga je naar "setup".
 Nu kopieer het commando en plak je dit op dezelfde of de desbetreffende server.
 En volg de stappen die gevraagd worden.
 
 ## Configuratie
 ### Allocations
-Maak nu zoals bij Pterodactyl allocations aan onder Server --> nodes--> node --> allocations
+Maak nu zoals bij Pterodactyl allocations aan onder Server --> nodes --> node --> allocations
 !!! note
     Ja mag het ip op 0.0.0.0 zetten en de juiste poort(en).
 
@@ -71,7 +71,7 @@ Maak nu zoals bij Pterodactyl allocations aan onder Server --> nodes--> node -->
 Deze Importeer je alle 2 onder servers --> images.
 
 !!! warning
-    Vergeet voor of na het importeren van de Images/Eggs zeker niet de juiste port Allocations te doen.
+    Vergeet voor of na het importeren van de Images/Eggs zeker niet de juiste poort Allocations te doen.
 
 **Image**
 

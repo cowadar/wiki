@@ -15,6 +15,22 @@ Handig voor zowel particuliere als professionele serverbeheerders! 🎮🚀
 !!! note
     Dit kan je vergelijken met Prerodactyl maar dan enkel voor Minecraft server en een veel simpelere setup.
 
+## Review
+We hebben deze oplossing uitgebreid getest en zijn tot een evenwichtige conclusie gekomen.
+Voordelen
+
+- Gebruiksgemak: De interface is intuïtief en vereist weinig training
+- Overzichtelijkheid: Alle belangrijke functies zijn logisch georganiseerd
+- Snelheid: De responstijd is indrukwekkend
+
+Nadelen
+
+- Beperkte vrijheid in de filemanager: het oploaden van folders is niet mogelijk.
+
+Ondanks de genoemde beperkingen biedt deze oplossing een uitstekende balans tussen functionaliteit en gebruiksgemak voor de meeste toepassingen.
+
+!!! warning
+    De lokale webinterface werkt goed. Vanaf we dit via traefik laten verlopen zie ik toch dat wat problemen op treden.
 ## Intallatie
 
 ### LXC

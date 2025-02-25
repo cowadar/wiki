@@ -34,7 +34,7 @@ voer het volgde uit:
 ```bash
 bash <(curl https://get-moonlight.app)
 ```
-Als het bovenstaande niet werkt
+Als het bovenstaande niet werkt:
 ```bash
 curl -o moonlight-installer.sh https://get-moonlight.app
 chmod +x moonlight-installer.sh

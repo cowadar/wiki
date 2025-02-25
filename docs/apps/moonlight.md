@@ -113,5 +113,5 @@ De bestaande Pterodactyl [Eggs](https://github.com/pelican-eggs/eggs/tree/master
 
 ## Review
 Na het uitgebreid testen van deze service. Raad ik deze aan alle mensen aan die een hosting service thuis willen draaien.
-Je hebt allee vrijheid en een makkelijke setup. In de volgende release komt ook een Docker Compose voor nog meer vrijheid.
+Je hebt alle vrijheid en een makkelijke setup. In de volgende release komt ook een Docker Compose voor nog meer vrijheid.
 De support is ook snel en goed.

@@ -7,11 +7,11 @@ Moonlight Panel
 
 Belangrijke kenmerken van Moonlight Panel zijn:
 
-- Plugin- en functiesysteem: Maakt het mogelijk om het paneel aan te passen en workflows te optimaliseren.
-- Virtuele schijven: Beschermt tegen exploits die proberen de harde schijf van de server te beschadigen.
-- Privénetwerken: Isoleert subservers en kritieke API's zonder complexe firewallconfiguraties.
-- Rechtenbeheer: Biedt gedetailleerde controle over de acties die beheerders kunnen uitvoeren.
-- Diagnosesysteem: Helpt bij het snel identificeren en oplossen van problemen.
+- **Plugin- en functiesysteem**: Maakt het mogelijk om het paneel aan te passen en workflows te optimaliseren.
+- **Virtuele schijven**: Beschermt tegen exploits die proberen de harde schijf van de server te beschadigen.
+- **Privénetwerken**: Isoleert subservers en kritieke API's zonder complexe firewallconfiguraties.
+- **Rechtenbeheer**: Biedt gedetailleerde controle over de acties die beheerders kunnen uitvoeren.
+- **Diagnosesysteem**: Helpt bij het snel identificeren en oplossen van problemen.
 
   [Moonlight Panel](https://moonlightpanel.xyz)
 
@@ -95,8 +95,8 @@ Een egg is een configuratiebestand of sjabloon dat wordt gebruikt binnen hosting
 Voorbeeld: Een Minecraft Egg bepaalt welke versie van Minecraft wordt geïnstalleerd, welke poorten worden geopend, en welke startup-opdrachten worden uitgevoerd.
 **Samengevat**
 
-- Image: De complete serveromgeving (bijv. een Docker-image met het OS en basissoftware).
-- Egg: Een configuratiebestand dat bepaalt hoe een server wordt ingesteld en beheerd binnen een hostingpanel.
+- **Image**: De complete serveromgeving (bijv. een Docker-image met het OS en basissoftware).
+- **Egg**: Een configuratiebestand dat bepaalt hoe een server wordt ingesteld en beheerd binnen een hostingpanel.
 
 #### Images 
 Deze kan kan je terug vinden in hun [Discord server](https://discord.gg/AUZjsgbv)

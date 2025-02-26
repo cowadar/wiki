@@ -18,7 +18,7 @@ Belangrijke kenmerken van Moonlight Panel zijn:
 Moonlight Panel is volledig on-premise, wat betekent dat alle gegevens en diensten binnen uw eigen infrastructuur blijven. Het project is oorspronkelijk ontwikkeld voor Endelon Hosting en is nu een onafhankelijk project met als doel een alles-in-één oplossing te bieden voor hostingbedrijven en gemeenschappen.
 
 !!! info
-    Dit is een heel goed alternatief voor Pterodactyl. En ja kan de Pterodactyl Eggs hier ook gebruiken.
+    Dit is een heel goed alternatief voor [Pterodactyl](pterodactyl.md). En ja kan de Pterodactyl Eggs hier ook gebruiken.
 
 ## Installatie
 ### Requirements

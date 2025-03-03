@@ -7,14 +7,14 @@ MakeMKV is een programma dat je kunt gebruiken om video’s die je bezit om te z
 ALs je met unraid werkt kan je eenvoudig je DVD/Blue-ray speler koppelen aan je docker container.
 Dit doe je door eerst op te zoeken welke je DVD/Blue-ray station is.
 ```bash
-    lsscsi
+lsscsi
 ```
 Dan krijg je volgende output: `cd/dvd  TSSTcorp DVDWBD SH-B123L  SB02  /dev/sr0   /dev/sg5` .
 Hier zie je dat `/dev/sr0` je DVD station is. nu moet je nog zien welke 
 
 Doe vervolgens in de `/dev` folder
 ```bash
-    ls-l
+ls-l
 ```
 Dan krijg je een lijst en zoek je acheter `crw-rw---- 1 root cdrom    21,     3 Jun 13 14:23 sg3`.
 Nu zie je dat `/dev/sg3/` je CD rom station is.
@@ -25,7 +25,7 @@ Als laatste voeg je aan je container volgende parameter toe bij `Extra Parameter
 Voor Proxmox zijn de stappen ongeveer hetzelfde.
 Maar eerste voer je volgende stappen uit op de Proxmox host.
 ```bash
-    lsscsi -g
+lsscsi -g
 ```
 Dan krijg je volgende output: `cd/dvd  TSSTcorp DVDWBD SH-B123L  SB02  /dev/sr0   /dev/sg5` .
 Hier zie je dat `/dev/sr0` je DVD station is. En hier zie je dat `/dev/sg5/` je CD rom station is.

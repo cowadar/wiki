@@ -23,11 +23,20 @@ Als laatste voeg je aan je container volgende parameter toe bij `Extra Parameter
 
 ### Proxmox
 Voor Proxmox zijn de stappen ongeveer hetzelfde.
+Maar eerste voer je volgende stappen uit op de Proxmox host.
 ```bash
     lsscsi -g
 ```
 Dan krijg je volgende output: `cd/dvd  TSSTcorp DVDWBD SH-B123L  SB02  /dev/sr0   /dev/sg5` .
 Hier zie je dat `/dev/sr0` je DVD station is. En hier zie je dat `/dev/sg5/` je CD rom station is.
+
+Nu maak je eerst 2 *Device passtrough* aan in de LXC met de waardes van hier boven.
+Dit kan zowel via de GUI als via de cli van Proxmox
+```
+nano /etc/pve/lxc/101.conf
+dev0: /dev/sr0,gid=0,mode=0666,uid=0
+dev1: /dev/sg5,gid=0,mode=0666,uid=0
+```
 
 Voege deze nu toe in onderstaande docker compose.
 

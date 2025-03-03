@@ -27,8 +27,7 @@ Voor Proxmox zijn de stappen ongeveer hetzelfde.
     lsscsi -g
 ```
 Dan krijg je volgende output: `cd/dvd  TSSTcorp DVDWBD SH-B123L  SB02  /dev/sr0   /dev/sg5` .
-Hier zie je dat `/dev/sr0` je DVD station is. nu moet je nog zien welke 
-En hier zie je dat `/dev/sg5/` je CD rom station is.
+Hier zie je dat `/dev/sr0` je DVD station is. En hier zie je dat `/dev/sg5/` je CD rom station is.
 
 Voege deze nu toe in onderstaande docker compose.
 
@@ -43,7 +42,7 @@ services:
             - /home/user:/storage:ro
             - /home/user/MakeMKV/output:/output:rw
         devices:
-            - /dev/sr0
-            - /dev/sg5
+            - "/dev/sr0:/dev/sr0"
+            - "/dev/sg5:/dev/sg5"
         image: jlesage/makemkv
 ```

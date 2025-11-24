@@ -1,5 +1,5 @@
 ---
-title: Fedora changes
+title: Login fix
 ---
 
 # GDM Login Scherm op Ultrawide Monitor - Fedora

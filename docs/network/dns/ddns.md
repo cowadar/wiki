@@ -5,7 +5,6 @@ Deze cheked om de zoveel tijd of je WAN IP veranderd is en past dit dan automati
 ??? "docker-compose.yaml"
 
     ```yaml
-    version: '2'
     services:
     cloudflare-ddns:
         image: oznu/cloudflare-ddns:latest

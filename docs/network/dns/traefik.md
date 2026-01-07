@@ -268,7 +268,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
         ![Voorbeeld cmd](../../_assets/images/traefik_user_api_token.png)
     === ".env"
 
-        ``` yaml
+        ```yaml
         ###### Coudflare
         CF_EMAIL=<clouflaremail>
         DOMAIN1_ZONE_ID=<zoneid>

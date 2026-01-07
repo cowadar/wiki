@@ -257,10 +257,6 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
             file: $SECRETDIR/cf_dns_api_token
           basic_auth_credentials:
             file: $SECRETDIR/basic_auth_credentials
-          authelia_session_secret:
-            file: $SECRETDIR/authelia_session_secret
-          authelia_storage_encryption_key:
-            file: $SECRETDIR/authelia_storage_encryption_key
         ```
 
     === "cf_dns_api_token"

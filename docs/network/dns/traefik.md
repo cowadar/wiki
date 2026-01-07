@@ -62,6 +62,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
 ??? "Configuratie bestanden"
     !!! warning
         Vergeet niet alle gegevens naar die van jou te veranderen!!
+    
     === "docker-compose.yaml"
 
         ```yaml
@@ -76,6 +77,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
             # depends_on:
             #   - socket-proxy
             networks:
+              - socket_proxy
               #- swarm-traefik
             command: # CLI arguments
               - --global.checkNewVersion=true
@@ -206,8 +208,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
             environment:
               DOMAIN: $DOMAINNAME_1
 
-
-
+          # Cloudflare Companion
           cloudflare-companion:
             image: tiredofit/traefik-cloudflare-companion
             container_name: cloudflare-companion
@@ -215,7 +216,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
               - $LOGDIR:/logs
               # - /var/run/docker.sock:/var/run/docker.sock
             secrets:
-            - cf_dns_api_token
+              - cf_dns_api_token
             environment:
               - TIMEZONE=$TZ
               - LOG_TYPE=BOTH
@@ -232,7 +233,6 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
               - REFRESH_ENTRIES=TRUE
               #- DOCKER_CERT_PATH=/docker-certs
               #- DOCKER_TLS_VERIFY=1
-
               - TRAEFIK_FILTER_LABEL=traefik.constraint
               - TRAEFIK_FILTER=proxy-public
             # depends_on:
@@ -247,75 +247,116 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
               # - traefik.http.routers.example.rule=Host(`ha.$DOMAINNAME_1`) || Host(`overseerr.$DOMAINNAME_1`)
 
         networks:
+          socket_proxy:
+            external: true
           swarm-traefik:
             external: true
+            
         secrets:
+          cf_dns_api_token:
+            file: $SECRETDIR/cf_dns_api_token
+          basic_auth_credentials:
+            file: $SECRETDIR/basic_auth_credentials
           authelia_session_secret:
             file: $SECRETDIR/authelia_session_secret
           authelia_storage_encryption_key:
             file: $SECRETDIR/authelia_storage_encryption_key
-
         ```
 
     === "cf_dns_api_token"
 
         ```yaml
-           #api token cloudflare
-           #Cloudflare --> Right ebove user --> Appearance --> api tokens --> create token
-           #Chose 1 or more domains
-           #Plain tekst below
+        # API token Cloudflare
+        # Cloudflare --> Right above user --> Appearance --> API tokens --> Create token
+        # Kies 1 of meer domeinen
+        # Plain tekst hieronder
         ```
+        
         ![Voorbeeld cmd](../../_assets/images/traefik_user_api_token.png)
+
     === ".env"
 
-        ```yaml
-        ###### Coudflare
-        CF_EMAIL=<clouflaremail>
-        DOMAIN1_ZONE_ID=<zoneid>
-        CF_GLOBAL_TOKEN=<global token>
+        ```bash
+        ###### Cloudflare
+        CF_EMAIL=<cloudflare-email>
+        DOMAIN1_ZONE_ID=<zone-id>
+        CF_GLOBAL_TOKEN=<global-token>
+        
+        ###### Domein namen
+        DOMAINNAME_1=example.com
+        DOMAINNAME_2=example.local
+        
+        ###### Directory paden
+        APPDATADIR=/path/to/appdata
+        LOGDIR=/path/to/logs
+        SECRETDIR=/path/to/secrets
+        
+        ###### Timezone
+        TZ=Europe/Brussels
+        
+        ###### IP's
+        CLOUDFLARE_IPS=173.245.48.0/20,103.21.244.0/22,103.22.200.0/22,103.31.4.0/22,141.101.64.0/18,108.162.192.0/18,190.93.240.0/20,188.114.96.0/20,197.234.240.0/22,198.41.128.0/17,162.158.0.0/15,104.16.0.0/13,104.24.0.0/14,172.64.0.0/13,131.0.72.0/22
+        LOCAL_IPS=127.0.0.1/32,10.0.0.0/8,192.168.0.0/16,172.16.0.0/12
         ```
+
     === "basic_auth_credentials"
+
         !!! warning
-            # Declaring the user list
-            #
-            # Note: when used in docker-compose.yml all dollar signs in the hash need to be doubled for escaping.
-            # To create a user:password pair, the following command can be used:
-            # echo $(htpasswd -nb user password) | sed -e s/\\$/\\$\\$/g
-            #
-            # Also note that dollar signs should NOT be doubled when they not evaluated (e.g. Ansible docker_container module).
-            TRAEFIK_DASHBOARD_CREDENTIALS=admin:$$2y$$05$$8eA6bz6E7J/ChsRFuD8njeW45yfJutYYb4HxwgUir3HP4EsggP/QNo0.
+            Declaring the user list
+            
+            Note: when used in docker-compose.yml all dollar signs in the hash need to be doubled for escaping.
+            To create a user:password pair, the following command can be used:
+            ```bash
+            echo $(htpasswd -nb user password) | sed -e s/\\$/\\$\\$/g
+            ```
+            
+            Also note that dollar signs should NOT be doubled when they not evaluated (e.g. Ansible docker_container module).
+
+        ```bash
+        # Voorbeeld credentials - VERVANG DEZE!
+        admin:$$2y$$05$$8eA6bz6E7J/ChsRFuD8njeW45yfJutYYb4HxwgUir3HP4EsggP/QNo0.
+        ```
 
     === "acme.json"
           
         !!! warning
-            Deze file laat je leeg deze word zelf aangevult.
+            Deze file laat je leeg, deze wordt automatisch aangevuld door Traefik.
+            
+            Zorg ervoor dat de permissies correct zijn:
+            ```bash
+            touch acme.json
+            chmod 600 acme.json
+            ```
 
-    === "app-name.yml
-        !!! waring
-        Pas de Gegevens aan!!!
+    === "app-name.yml"
+
+        !!! warning
+            Pas de gegevens aan voor jouw applicatie!
           
         ```yaml
         http:
-        routers:
-          <APP>-rtr:
-            rule: "Host(`<APP>.{{env "DOMAINNAME_1"}}`)"
-            entryPoints:
-              - websecure-external
-              - websecure-internal
-            middlewares:
-              - chain-no-auth
-            service: <APP>>-svc
-            tls:
-              certResolver: dns-cloudflare
-              options: tls-opts@file
-        services:
-          <APP>>-svc:
-            loadBalancer:
-              servers:
-                - url: "http://<ip+port>" # http://IP-ADDRESS:PORT
+          routers:
+            <APP>-rtr:
+              rule: "Host(`<APP>.{{env "DOMAINNAME_1"}}`)"
+              entryPoints:
+                - websecure-external
+                - websecure-internal
+              middlewares:
+                - chain-no-auth
+              service: <APP>-svc
+              tls:
+                certResolver: dns-cloudflare
+                options: tls-opts@file
+                
+          services:
+            <APP>-svc:
+              loadBalancer:
+                servers:
+                  - url: "http://<ip:port>" # Bijvoorbeeld: http://192.168.1.100:8080
         ```
 
-    === "chain-basic-auth.yml
+    === "chain-basic-auth.yml"
+
         ```yaml
         http:
           middlewares:
@@ -329,22 +370,21 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
                   # - middlewares-compress
         ```
 
-    === "chain-no-auth.yml
+    === "chain-no-auth.yml"
           
         ```yaml
         http:
           middlewares:
-            chain-basic-auth:
+            chain-no-auth:
               chain:
                 middlewares:
                   - middlewares-rate-limit
                   - middlewares-secure-headers
                   # - crowdsec-bouncer
-                  - middlewares-basic-auth
                   # - middlewares-compress
         ```
 
-    === "middlewares-basic-auth.yml
+    === "middlewares-basic-auth.yml"
           
         ```yaml
         http:
@@ -357,7 +397,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
                 realm: "Traefik Basic Auth"
         ```
 
-    === "middlewares-buffering.yml
+    === "middlewares-buffering.yml"
           
         ```yaml
         http:
@@ -371,7 +411,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
                 retryExpression: "IsNetworkError() && Attempts() <= 2"
         ```
 
-    === "middlewares-crowedsec.yml
+    === "middlewares-crowdsec.yml"
           
         ```yaml
         http:
@@ -382,33 +422,34 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
                 trustForwardHeader: true
         ```
 
-    === "middlewares-headers.yml
+    === "middlewares-headers.yml"
           
         ```yaml
-        middlewares:
-          default-headers:
-            headers:
-              browserXssFilter: true
-              contentTypeNosniff: true
-              forceSTSHeader: true
-              stsIncludeSubdomains: true
-              stsPreload: true
-              stsSeconds: 31536000
-              customFrameOptionsValue: "SAMEORIGIN"
+        http:
+          middlewares:
+            default-headers:
+              headers:
+                browserXssFilter: true
+                contentTypeNosniff: true
+                forceSTSHeader: true
+                stsIncludeSubdomains: true
+                stsPreload: true
+                stsSeconds: 31536000
+                customFrameOptionsValue: "SAMEORIGIN"
         ```
 
-    === "middlewares-rate-limit.yml
+    === "middlewares-rate-limit.yml"
           
         ```yaml
-            http:
-              middlewares:
-                middlewares-rate-limit:
-                  rateLimit:
-                    average: 100
-                    burst: 200
+        http:
+          middlewares:
+            middlewares-rate-limit:
+              rateLimit:
+                average: 100
+                burst: 200
         ```
 
-    === "middlewares-secure-headers.yml
+    === "middlewares-secure-headers.yml"
           
         ```yaml
         http:
@@ -438,7 +479,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
                   X-Forwarded-Proto: https
         ```
 
-    === "middlewares-websocket.yml
+    === "middlewares-websocket.yml"
           
         ```yaml
         http:
@@ -449,7 +490,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
                   X-Forwarded-Proto: "https"
         ```
 
-    === "tls-opts.yml
+    === "tls-opts.yml"
           
         ```yaml
         tls:
@@ -472,6 +513,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
                 - CurveP384
               sniStrict: true
         ```
+
 
 
 

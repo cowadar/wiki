@@ -296,7 +296,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
         !!! waring
         Pas de Gegevens aan!!!
           
-        ``` yaml
+        ```yaml
         http:
         routers:
           <APP>-rtr:
@@ -318,7 +318,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
         ```
 
     === "chain-basic-auth.yml
-        ``` yaml
+        ```yaml
         http:
           middlewares:
             chain-basic-auth:
@@ -333,7 +333,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
 
     === "chain-no-auth.yml
           
-        ``` yaml
+        ```yaml
         http:
           middlewares:
             chain-basic-auth:
@@ -348,7 +348,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
 
     === "middlewares-basic-auth.yml
           
-        ``` yaml
+        ```yaml
         http:
           middlewares:
             middlewares-basic-auth:
@@ -361,7 +361,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
 
     === "middlewares-buffering.yml
           
-        ``` yaml
+        ```yaml
         http:
           middlewares:
             middlewares-buffering:
@@ -375,7 +375,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
 
     === "middlewares-crowedsec.yml
           
-        ``` yaml
+        ```yaml
         http:
           middlewares:
             crowdsec-bouncer:
@@ -386,7 +386,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
 
     === "middlewares-headers.yml
           
-        ``` yaml
+        ```yaml
         middlewares:
           default-headers:
             headers:
@@ -401,7 +401,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
 
     === "middlewares-rate-limit.yml
           
-        ``` yaml
+        ```yaml
             http:
               middlewares:
                 middlewares-rate-limit:
@@ -412,7 +412,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
 
     === "middlewares-secure-headers.yml
           
-        ``` yaml
+        ```yaml
         http:
           middlewares:
             middlewares-secure-headers:
@@ -442,7 +442,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
 
     === "middlewares-websocket.yml
           
-        ``` yaml
+        ```yaml
         http:
           middlewares:
             sslheader:
@@ -453,7 +453,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
 
     === "tls-opts.yml
           
-        ``` yaml
+        ```yaml
         tls:
           options:
             tls-opts:

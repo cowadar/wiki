@@ -269,7 +269,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
     === ".env"
 
         ``` yaml
-###### Coudflare
+        ###### Coudflare
         CF_EMAIL=<clouflaremail>
         DOMAIN1_ZONE_ID=<zoneid>
         CF_GLOBAL_TOKEN=<global token>

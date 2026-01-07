@@ -275,17 +275,15 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
         CF_GLOBAL_TOKEN=<global token>
         ```
     === "basic_auth_credentials"
-
-        # Declaring the user list
-        #
-        # Note: when used in docker-compose.yml all dollar signs in the hash need to be doubled for escaping.
-        # To create a user:password pair, the following command can be used:
-        # echo $(htpasswd -nb user password) | sed -e s/\\$/\\$\\$/g
-        #
-        # Also note that dollar signs should NOT be doubled when they not evaluated (e.g. Ansible docker_container module).
-        TRAEFIK_DASHBOARD_CREDENTIALS=admin:$$2y$$05$$8eA6bz6E7J/ChsRFuD8njeW45yfJutYYb4HxwgUir3HP4EsggP/QNo0.
-
-        ```   
+        !!! warning
+            # Declaring the user list
+            #
+            # Note: when used in docker-compose.yml all dollar signs in the hash need to be doubled for escaping.
+            # To create a user:password pair, the following command can be used:
+            # echo $(htpasswd -nb user password) | sed -e s/\\$/\\$\\$/g
+            #
+            # Also note that dollar signs should NOT be doubled when they not evaluated (e.g. Ansible docker_container module).
+            TRAEFIK_DASHBOARD_CREDENTIALS=admin:$$2y$$05$$8eA6bz6E7J/ChsRFuD8njeW45yfJutYYb4HxwgUir3HP4EsggP/QNo0.
 
     === "acme.json"
           

@@ -39,7 +39,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
       │     │   ├── access.log
       │     │   └── traefik.log
       │     └── rules
-      │         ├── app-ha.yml
+      │         ├── app-name.yml
       │         ├── chain-basic-auth.yml
       │         ├── chain-no-auth.yml
       │         ├── middlewares-basic-auth.yml
@@ -63,7 +63,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
     !!! warning
         Vergeet niet alle gegevens naar die van jou te veranderen!!
     
-    === "docker-compose.yaml"
+    === "compose.yaml"
 
         ```yaml
         services:

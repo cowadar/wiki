@@ -271,7 +271,6 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
         ![Voorbeeld cmd](../../_assets/images/traefik_user_api_token.png)
 
     === ".env"
-
         ```bash
         ###### Cloudflare
         CF_EMAIL=<cloudflare-email>
@@ -317,6 +316,7 @@ Als je dat eenmaal gedaan hebt kan je beginnen aan de configuratie van Traefik.
           
         !!! warning
             Deze file laat je leeg, deze wordt automatisch aangevuld door Traefik.
+            sudo chmod 755 acme.json
             
             Zorg ervoor dat de permissies correct zijn:
             ```bash
